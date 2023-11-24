@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+
+*{
+    font-family: 'Abril Fatface', serif;
+}
