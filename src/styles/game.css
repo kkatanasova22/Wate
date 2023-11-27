@@ -28,3 +28,20 @@ a{
     position: absolute;
     font-size: 4rem;
 }
+
+#textContainer{
+    margin-left: 5rem;
+    margin-top: 4rem;
+    max-width: fit-content;
+    float: left;
+}
+
+#textContainer>h1{
+    color: #578116;
+    font-size: 6rem;
+}
+
+#textContainer>p{
+    color: #704517;
+    font-size: 2rem;
+}
