@@ -45,3 +45,35 @@ a{
     color: #704517;
     font-size: 2rem;
 }
+
+#trees{
+    margin-top: 5rem;
+    /* border: 1px solid pink; */
+    margin-left: 10rem;
+    max-width: 25rem;
+    float: left;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50rem;
+    height: 33rem;
+}
+
+#treeConst{
+    width: 7rem;
+    height: 10rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.treesContainer {
+    width: 7rem;
+    height: 10rem;
+    background-color: transparent;
+    background-image: url(../images/tree.png);
+    background-repeat: no-repeat;
+    margin: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
