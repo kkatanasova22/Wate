@@ -1,10 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100&display=swap');
 @font-face {
     font-family: Graphik;
     src: url(../fonts/GraphikBlack.otf);
     src: url(../fonts/GraphikMedium.otf);
     src: url(../fonts/GraphikRegular.otf);
 }
-
+body {
+    overflow: hidden
+}
+*{
+    font-family: 'Abril Fatface', serif;
+}
+#heading, #fineprint {
+    font-family: 'Abril Fatface', serif;
+    color: black;
+    margin: 0;
+    font-size: 9vw;
+    font-weight: 350;
+    line-height: 0.9;
+}
+.material-symbols-outlined {
+    position: absolute;
+    font-size: 3vw;
+}
+.earthCaption {
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: 24vh;
+}
+#fineprint {
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3.5vw;
+}
+#smalltext {
+    position: absolute;
+    font-family: 'Graphik Regular', sans-serif;
+    font-size: 1vw;
+    text-decoration: none;
+    color: black;
+}
 canvas#bg {
     position: fixed;
     top: 0;
@@ -13,7 +48,24 @@ canvas#bg {
     height: 100%;
     z-index: -1;
 }
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.coinLink {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
 
-*{
-    font-family: 'Abril Fatface', serif;
+.plantLink {
+    position: fixed;
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
 }
