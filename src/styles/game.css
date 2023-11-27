@@ -1,0 +1,79 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #F6F4EB;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.coinLink {
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#smalltext{
+    transform: rotate(-90deg);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    user-select: none;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    font-size: 4rem;
+}
+
+#textContainer{
+    margin-left: 5rem;
+    margin-top: 4rem;
+    max-width: fit-content;
+    float: left;
+}
+
+#textContainer>h1{
+    color: #578116;
+    font-size: 6rem;
+}
+
+#textContainer>p{
+    color: #704517;
+    font-size: 2rem;
+}
+
+#trees{
+    margin-top: 5rem;
+    /* border: 1px solid pink; */
+    margin-left: 10rem;
+    max-width: 25rem;
+    float: left;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50rem;
+    height: 33rem;
+}
+
+#treeConst{
+    width: 7rem;
+    height: 10rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.treesContainer {
+    width: 7rem;
+    height: 10rem;
+    background-color: transparent;
+    background-image: url(../images/tree.png);
+    background-repeat: no-repeat;
+    margin: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
