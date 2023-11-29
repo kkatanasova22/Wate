@@ -26,6 +26,13 @@ function setGame() {
         tree.addEventListener("dragstart", dragStart);
         document.getElementById("trees").appendChild(tree);
     }
+
+    coins = parseInt(localStorage.getItem("coins")) || 0;
+    updateCoinsHeading();
+
+    if (localStorage.getItem('dark')) {
+        document.body.classList.add('dark');
+    }
 }
 
 function dragStart(event) {
@@ -49,8 +56,9 @@ function drop(event) {
         event.target.appendChild(draggedElement);
 
         coins += 10;
-        console.log("Coins: ", coins);
         updateCoinsHeading();
+
+        localStorage.setItem("coins", coins.toString());
     }
 }
 
