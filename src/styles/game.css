@@ -94,3 +94,41 @@ a{
     margin-top: 8rem;
     justify-content: space-between;
 }
+
+#soilContainer {
+    margin-top: 9rem;
+    background: transparent;
+    max-width: 40rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
+    margin-left: 13rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.soils {
+    margin-right: 1.5rem;
+    width: 162px;
+    height: 142px;
+    background-repeat: no-repeat;
+    background-image: url(../images/soil.png);
+    background-position: center;
+    background-color: transparent;
+}
+
+.soils:nth-child(8), .soils:nth-child(5), .soils:nth-child(2){
+    margin-top: -2rem;
+}
+
+.soils:nth-child(2)
+{
+    margin-top: 1rem;
+}
+
+
+.soils .treesContainer, .soils #treeConst{
+    margin-top: -5rem;
+    margin-left: 1rem;
+}
