@@ -34,8 +34,26 @@ loader.load('../models/sun.glb', (gltf) => {
   scene.add(model2);
   animate();
 });
-const skyTexture = new THREE.TextureLoader().load('../misc/sky.png');
-scene.background = skyTexture;
+let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+let body = document.querySelector("body");
+let elementsToStyle = document.querySelectorAll("#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb");
+
+if (dark) {
+  const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
+  scene.background = darkTexture;
+  body.classList.add("dark-mode");
+  elementsToStyle.forEach(element => {
+    element.style.color = "white";
+  });
+} else {
+  const lightTexture = new THREE.TextureLoader().load('../misc/lightbg.png');
+  scene.background = lightTexture;
+  body.classList.remove("dark-mode");
+  elementsToStyle.forEach(element => {
+    element.style.color = "black";
+  });
+}
+console.log(matched);
 function rotateEarth() {
   if (model) {
     model.rotation.x += 0.00005;
