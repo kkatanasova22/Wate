@@ -28,7 +28,8 @@ function setGame() {
     }
 
     coins = parseInt(localStorage.getItem("coins")) || 0;
-    updateCoinsHeading();
+
+    updateCoinsInParentWindow();
 
     if (localStorage.getItem('dark')) {
         document.body.classList.add('dark');
@@ -56,12 +57,15 @@ function drop(event) {
         event.target.appendChild(draggedElement);
 
         coins += 10;
-        updateCoinsHeading();
+
+        updateCoinsInParentWindow();
 
         localStorage.setItem("coins", coins.toString());
     }
 }
 
-function updateCoinsHeading() {
-    document.getElementById("coinsHeading").textContent = "Coins: " + coins;
+function updateCoinsInParentWindow() {
+    if (window.opener && !window.opener.closed) {
+        window.opener.updateCoinsHeading(coins);
+    }
 }

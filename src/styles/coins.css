@@ -50,8 +50,8 @@ body{
     background: rgba(0, 0, 0, 0.00);
     color: #1761AA;
 
-    width: 29.3125rem;
-    height: 6.6875rem;
+    width: 29rem;
+    height: 7rem;
     font-family: Graphik;
     font-size: 4rem;
     font-weight: 600;
@@ -62,6 +62,31 @@ body{
     color: rgb(255, 255, 255);
     border: 2px solid #1761AA;
     background: #1761AA;
+
+    transition: 0.5s;
+}
+
+#resetScoreButton{
+    margin-top: 2rem;
+    margin-left: 50rem;
+
+    border-radius: 1.25rem;
+    border: 2px solid #1761AA;
+    background: rgba(208, 220, 219, 0.26);
+    width: 19.1875rem;
+    height: 4.375rem;
+    color: #1761AA;
+    font-family: Graphik;
+    font-size: 2rem;
+    font-weight: 400;
+    
+    cursor: pointer;
+}
+
+#resetScoreButton:hover{
+    color: rgb(255, 255, 255);
+    background: #1761AA;
+    border: 2px solid #1761AA;
 
     transition: 0.5s;
 }
