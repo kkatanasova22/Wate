@@ -2,7 +2,7 @@ let savedCoins = localStorage.getItem("coins");
     let coinsDisplay = document.getElementById("coinsDisplay");
 
     if (savedCoins !== null) {
-      coinsDisplay.textContent = "Coins: " + savedCoins;
+      coinsDisplay.textContent = savedCoins + "W";
     } else {
       coinsDisplay.textContent = "No coins saved.";
     }
