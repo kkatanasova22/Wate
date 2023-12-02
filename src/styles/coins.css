@@ -1,3 +1,25 @@
 body{
     background: #F6F4EB;
 }
+
+#background{
+    width: 100%;
+    height: 100%;
+}
+
+#leftCoins{
+    width: 44rem;
+    height: 40rem;
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+}
+
+#rightCoins{
+    width: 43rem;
+    height: 36rem;
+    position: fixed;
+    right: -3rem;
+    top: -4rem;
+    user-select: none;
+}

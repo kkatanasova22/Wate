@@ -132,3 +132,91 @@ a{
     margin-top: -5rem;
     margin-left: 1rem;
 }
+
+/* Small devices (phones) */
+/* @media screen and (max-width: 767px) {
+    #container{
+        width: 5rem;
+        height: 5rem;
+    }
+  } */
+  
+  /* Medium devices (tablets) */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #container{
+        margin-top: -3rem;
+        width: 30rem;
+        height: 25rem;
+        background-size: contain;
+    }
+
+    .soils {
+        margin-right: 0.8rem;
+        width: 100px;
+        height: 80px;
+        background-repeat: no-repeat;
+        background-image: url(../images/soil.png);
+        background-position: center;
+        background-color: transparent;
+        background-size: contain;
+    }
+
+    #soilContainer {
+        margin-top: 9rem;
+        background: transparent;
+        max-width: 40rem;
+        padding-top: 5rem;
+        margin-top: 5rem;
+        margin-left: 4rem;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-size: contain;
+    }
+    
+    #treeConst{
+        width: 5rem;
+        height: 8rem;
+        background-color: transparent;
+        cursor: pointer;
+        background-size: contain;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    
+    .treesContainer {
+        width: 5rem;
+        height: 8rem;
+        background-color: transparent;
+        background-image: url(../images/tree.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 5px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    #trees{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        /* border: 1px solid pink; */
+        margin-left: 10rem;
+        max-width: 20rem;
+        float: left;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 50rem;
+        height: 33rem;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media screen and (min-width: 992px) {
+    /* Styles for large screens */
+  }
+  
