@@ -4,7 +4,7 @@ let coinsDisplay = document.getElementById("coinsDisplay");
 if (savedCoins !== null) {
     coinsDisplay.textContent = savedCoins + "W";
 } else {
-    coinsDisplay.textContent = "No coins saved.";
+    coinsDisplay.textContent = "0W";
 }
 
 let resetScoreButton = document.getElementById("resetScoreButton");
