@@ -2,6 +2,13 @@ body{
     background: #F6F4EB;
 }
 
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+
 #background{
     width: 100%;
     height: 100%;
@@ -22,4 +29,12 @@ body{
     right: -3rem;
     top: -4rem;
     user-select: none;
+}
+
+#coins{
+font-family: Graphik;
+font-size: 6rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
