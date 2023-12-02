@@ -51,6 +51,7 @@ body{
 }
 
 #earnBt{
+    margin-top: 1rem;
     margin-left: 45rem;
     border-radius: 1.625rem;
     border: 2px solid #1761AA;
