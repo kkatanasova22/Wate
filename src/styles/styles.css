@@ -5,12 +5,20 @@
     src: url(../fonts/GraphikMedium.otf);
     src: url(../fonts/GraphikRegular.otf);
 }
+
+::selection{
+    background: black;
+    color: white;
+}
+
+
 body {
     overflow-y: hidden;
 }
 *{
     font-family: 'Abril Fatface', serif;
 }
+
 #heading, #fineprint {
     font-family: 'Abril Fatface', serif;
     color: black;
@@ -19,22 +27,26 @@ body {
     font-weight: 350;
     line-height: 0.9;
 }
+
 #hamb {
     font-size: 3vw;
     margin-left: 1vw;
     margin-top: 2vh;
     position: absolute;
 }
+
 .earthCaption {
     position: absolute;
     margin-left: 50vw;
     margin-top: 24vh;
 }
+
 #fineprint {
     font-size: 3vw;
     font-family: 'Poppins', sans-serif;
     margin-left: 3.5vw;
 }
+
 canvas#bg {
     position: fixed;
     top: 0;
@@ -43,13 +55,16 @@ canvas#bg {
     height: 100%;
     z-index: -1;
 }
+
 .container {
     height: 100vh;
 }
+
 .coinLink, .plantLink {
     position: fixed;
     top: 50%;
 }
+
 #chevronLeft, #chevronRight {
     font-size: 2.5vw;
     margin: 0 1vw;
@@ -57,6 +72,7 @@ canvas#bg {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .smalltext {
     font-family: 'Graphik Regular', sans-serif;
     font-size: 1vw;
@@ -64,13 +80,16 @@ canvas#bg {
     color: black;
     margin: 0;
 }
+
 .rotatedLeft {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
 }
+
 .rotatedRight {
     writing-mode: vertical-rl;
 }
+
 .coinLink {
     left: 3vw;
     transform: translateY(-50%);
@@ -79,6 +98,7 @@ canvas#bg {
     align-items: center;
     justify-content: flex-end;
 }
+
 .plantLink {
     right: 3vw;
     transform: translateY(-50%);
