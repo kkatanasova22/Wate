@@ -44,3 +44,26 @@ body{
 #coinsDisplay{
     color: #1761AA;
 }
+
+#earnBt{
+    margin-left: 45rem;
+    border-radius: 1.625rem;
+    border: 2px solid #1761AA;
+    background: rgba(0, 0, 0, 0.00);
+    color: #1761AA;
+
+    width: 29.3125rem;
+    height: 6.6875rem;
+    font-family: Graphik;
+    font-size: 4rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#earnBt:hover{
+    color: rgb(255, 255, 255);
+    border: 2px solid #1761AA;
+    background: #1761AA;
+
+    transition: 0.5s;
+}

@@ -215,8 +215,7 @@ a{
     }
   }
   
-  /* Large devices (desktops) */
   @media screen and (min-width: 992px) {
-    /* Styles for large screens */
+    /*large screens */
   }
   
