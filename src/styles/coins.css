@@ -31,10 +31,16 @@ body{
     user-select: none;
 }
 
-#coins{
-font-family: Graphik;
-font-size: 6rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+#coins {
+    margin-top: 18rem;
+    margin-left: 30rem;
+    font-family: Graphik;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#coinsDisplay{
+    color: #1761AA;
 }
