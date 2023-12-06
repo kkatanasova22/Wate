@@ -41,3 +41,14 @@ a{
     font-size: 3rem;
     user-select: none;
 }
+
+#heading{
+    color: #1F5A9E;
+    font-family: Graphik;
+    font-size: 6rem;
+    font-weight: 700;
+
+    margin-top: 3rem;
+    margin-left: 2rem;
+    background: transparent;
+}
