@@ -1,0 +1,15 @@
+::selection{
+    background: black;
+    color: white;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #F6F4EB;
+    font-family: Graphik;
+}
+
+h1, p{
+    background: transparent;
+}
