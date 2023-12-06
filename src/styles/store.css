@@ -13,3 +13,31 @@
 h1, p{
     background: transparent;
 }
+
+.coinLink {
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+#smalltext{
+    transform: rotate(-90deg);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    background: transparent;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    left: -1rem;
+    font-size: 3rem;
+    user-select: none;
+}
