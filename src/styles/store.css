@@ -62,3 +62,85 @@ a{
     justify-content: flex-start;
     align-items: flex-start;
 }
+
+.bigCard,
+.smallCard {
+    margin-right: 1rem;
+    height: 44rem;
+    width: 38rem;
+    border-radius: 1.25rem;
+    border: 3px solid #D2D2D2;
+    background: rgba(226, 226, 226, 0.90);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigCard:last-child{
+    width: 30rem;
+}
+
+.smallCard{
+    height: 21rem;
+    width: 22rem;
+    background: #C4C4C4;
+}
+
+.smallCard:first-child{
+    background: url(../images/tree.png) center center no-repeat rgba(226, 226, 226, 0.90);
+    z-index: 1;
+}
+
+.smallCard:last-child{
+    margin-top: 1.5rem;
+    background: url(../images/faiskoTree.png) center center no-repeat rgba(226, 226, 226, 0.90);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.bigName,
+.smallName {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    color: #FFF;
+    width: 100%;
+    height: 11rem;
+    text-align: center;
+    border: 1px solid rgba(96, 96, 96, 0.01);
+    background: rgba(166, 166, 166, 0.13);
+}
+
+.bigName > h1,
+.smallName > h1 {
+    margin-top: 1.5rem;
+}
+
+.bigPrice,
+.smallPrice {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: #505050;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke-width: 3px;
+    stroke: #393939;
+    cursor: pointer;
+    color: #fff;
+}
+
+.bigPrice > h1,
+.smallPrice > h1 {
+    font-weight: 500;
+}
