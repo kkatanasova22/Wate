@@ -52,3 +52,13 @@ a{
     margin-left: 2rem;
     background: transparent;
 }
+
+#containerShop {
+    margin-top: 2rem;
+    width: 108rem;
+    height: 46rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
