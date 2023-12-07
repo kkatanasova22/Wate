@@ -124,7 +124,7 @@
     background: transparent;
 }
 
-#impact, #community{
+#impact{
     height: 35vh;
 }
 
@@ -152,4 +152,18 @@
 #communities{
     margin-right: 25vw;
     margin-bottom: 1vh;
+}
+
+#impBtn{
+    color: #1761AA;
+    font-size: 3vw;
+    border-radius: 1.625rem;
+    border: 2px solid #1761AA;
+    width: 25vw;
+    height: 10vh;
+    cursor: pointer;
+
+    background: rgba(0, 0, 0, 0.00);
+    margin-left: 8vw;
+    margin-top: -40vh;
 }
