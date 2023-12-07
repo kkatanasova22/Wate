@@ -78,7 +78,7 @@
     max-width: 90vw;
 }
 
-#change{
+#change, #individual{
     height: 50vh;
 }
 
@@ -103,7 +103,7 @@
     font-size: 1.5vw;
 }
 
-#changes {
+#changes, #individuals {
     font-size: 4vw;
     margin-left: 9vw;
     margin-top: 15vh;
@@ -120,11 +120,11 @@
     margin-right: 3vw;
 }
 
-#impact{
+#impact, #community{
     height: 35vh;
 }
 
-#impacts{
+#impacts, #communities{
     text-align: right;
     font-size: 4vw;
     margin-right: 42vw;
