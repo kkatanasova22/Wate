@@ -14,9 +14,11 @@
 
 body {
     overflow-y: hidden;
+    margin: 0;
 }
 *{
     font-family: 'Abril Fatface', serif;
+    user-select: none;
 }
 
 #heading, #fineprint {
@@ -31,8 +33,25 @@ body {
 #hamb {
     font-size: 3vw;
     margin-left: 1vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
     position: absolute;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu {
+    position: absolute;
+    background: #F1EFE9D1;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.menu.open {
+    opacity: 1;
+    z-index: 0;
 }
 
 .earthCaption {
@@ -53,7 +72,7 @@ canvas#bg {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .container {
@@ -79,6 +98,33 @@ canvas#bg {
     text-decoration: none;
     color: black;
     margin: 0;
+}
+.themeSelect {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.themeSelect img {
+    justify-content: center;
+    width: 12vw;
+    user-select: none;
+    padding: 0.5vw;
+}
+.themeSelect img:hover {
+    background-color: rgba(110, 110, 110, 0.2);
+    border-radius: 15px;
+}
+
+.separator {
+    width: 1px;
+    height: 95vh;
+    background-color: black;
+    transform: rotate(18.4deg);
+    margin-inline: 7vw;
 }
 
 .rotatedLeft {

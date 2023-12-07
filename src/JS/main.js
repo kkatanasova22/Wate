@@ -7,7 +7,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
-window.addEventListener( 'resize', onWindowResize, false );
+window.addEventListener('resize', onWindowResize, false);
 const loader = new GLTFLoader();
 let model;
 let model2;
@@ -17,10 +17,12 @@ const light = new THREE.AmbientLight(0xffffff, 9);
 scene.add(light);
 camera.position.setX(0);
 camera.position.setZ(30);
+camera.fov = 40;
+camera.updateProjectionMatrix();
 loader.load('../models/earth.glb', (gltf) => {
   model = gltf.scene;
-  model.scale.set(0.49, 0.53, 0.49);
-  model.position.set(-240, 0, -500);
+  model.scale.set(0.017, 0.017, 0.017);
+  model.position.set(-8, 0, 0);
   model.rotateX(-0);
   model.rotateY(-3.15);
   model.rotateZ(0);
@@ -29,52 +31,103 @@ loader.load('../models/earth.glb', (gltf) => {
 });
 loader.load('../models/sun.glb', (gltf) => {
   model2 = gltf.scene;
-  model2.scale.set(1, 1, 1);
-  model2.position.set(1450, 550, -1360);
+  model2.scale.set(5, 5.5, 5);
+  model2.position.set(38, 16, -20);
   scene.add(model2);
   animate();
 });
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 let body = document.querySelector("body");
 let elementsToStyle = document.querySelectorAll("#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb");
+applySystemDefault();
 
-if (dark) {
+function applyDarkMode() {
   const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
   scene.background = darkTexture;
   body.classList.add("dark-mode");
   elementsToStyle.forEach(element => {
     element.style.color = "white";
   });
-} else {
+  updateHamburgerColor(true);
+}
+
+function applyLightMode() {
   const lightTexture = new THREE.TextureLoader().load('../misc/lightbg.png');
   scene.background = lightTexture;
   body.classList.remove("dark-mode");
   elementsToStyle.forEach(element => {
     element.style.color = "black";
   });
+  updateHamburgerColor(false);
 }
-console.log(matched);
+
+function applySystemDefault() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDark) {
+    applyDarkMode();
+  } else {
+    applyLightMode();
+  }
+}
+
+function updateHamburgerColor(isDarkMode, isMenuOpen) {
+  const hamb = document.querySelector('#hamb');
+  const iconText = isDarkMode ? "menu" : "close";
+  const iconColor = isMenuOpen ? 'black' : (isDarkMode ? 'white' : 'black');
+
+  hamb.innerHTML = isMenuOpen ? "close" : iconText;
+  hamb.style.color = iconColor;
+}
+
+function setMode(mode) {
+  if (mode === 'dark') {
+    applyDarkMode();
+  } else {
+    applyLightMode();
+  }
+}
+
+document.getElementById("selectDark").onclick = function () {
+  applyDarkMode();
+}
+document.getElementById("selectLight").onclick = function () {
+  applyLightMode();
+}
+document.getElementById("selectDefault").onclick = function () {
+  applySystemDefault();
+}
+document.getElementById("hamb").onclick = function () {
+  const menu = document.querySelector('.menu');
+  const isMenuOpen = menu.classList.toggle('open');
+  const darkMode = body.classList.contains("dark-mode");
+  updateHamburgerColor(darkMode, isMenuOpen);
+};
+
 function rotateEarth() {
   if (model) {
     model.rotation.x += 0.00005;
     model.rotation.y += 0.00005;
   }
 }
+
 function rotateSun() {
   if (model) {
     model2.rotation.z -= 0.00003;
     model2.rotation.x += 0.00003;
   }
 }
+
 function animate() {
   requestAnimationFrame(animate);
   rotateEarth();
   rotateSun();
   renderer.render(scene, camera);
 }
-function onWindowResize(){
+
+function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
 animate();
