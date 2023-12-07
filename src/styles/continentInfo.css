@@ -14,6 +14,7 @@
     /* background-color: #F3FAFF; */
     padding: 0;
     font-family: Graphik;
+    background: #F3FAFF;
 }
 
 
@@ -70,6 +71,7 @@
     opacity: 0.4;
 
     user-select: none;
+    background: transparent;
 }
 
 #separator{
@@ -92,6 +94,7 @@
     background: url('../images/leafIcon.png') no-repeat left top;
     background-size: 2vw 4vh; 
     margin-bottom: 10px;
+    background: transparent;
 }
 
 #changeUL{
@@ -118,6 +121,7 @@
     float: right;
     margin-top: -46vh;
     margin-right: 3vw;
+    background: transparent;
 }
 
 #impact, #community{
@@ -136,10 +140,16 @@
     margin-right: 26vw;
     max-width: 31vw;
     margin-bottom: 5vh;
+    background: transparent;
 }
 
 #how{
     margin-top: 10vh;
     text-align: center;
     font-size: 5vw;
+}
+
+#communities{
+    margin-right: 25vw;
+    margin-bottom: 1vh;
 }
