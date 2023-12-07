@@ -1,8 +1,50 @@
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+
 ::selection{
     background: black;
     color: white;
 }
 
 *{
-    background-color: #F3FAFF;
+    /* background-color: #F3FAFF; */
+    padding: 0;
 }
+
+#containerBasis{
+    max-width: fit-content;
+    height: 70vh;
+}
+
+#heading{
+    color: #000;
+
+    font-family: Graphik;
+    font-size: 4.5vw;
+    font-weight: 600;
+
+    margin-left: 7vw;
+    margin-top: 28vh;
+
+    max-width: 62vw;
+}
+
+#bold{
+    font-size: 6vw;
+    font-weight: 800;
+}
+
+#continentMap{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 66vw;
+    height: 100vh;
+    opacity: 0.4;
+}
+
