@@ -120,6 +120,7 @@ html, body {
     margin-top: -46vh;
     margin-right: 3vw;
     background: transparent;
+    user-select: none;
 }
 
 #impact{
