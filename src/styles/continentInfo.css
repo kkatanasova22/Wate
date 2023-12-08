@@ -220,6 +220,8 @@ html, body {
     }
 }
 
+/*Fix separator under impact*/
+
 @media screen and (min-width: 900px) and (max-width: 1980px){
     #impact{
         height: 40vh;
