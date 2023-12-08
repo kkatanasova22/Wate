@@ -132,6 +132,13 @@ html, body {
     margin-right: 42vw;
 }
 
+#impacts {
+    font-size: 4vw;
+    margin-right: 42vw; 
+    margin-top: 15vh;
+    text-align: right; 
+}
+
 #impactUL{
     float:right;
     font-size: 1.5vw;
