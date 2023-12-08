@@ -90,6 +90,7 @@ body{
     cursor: pointer;
     user-select: none;
 }
+
 #resetScoreButton:hover{
     color: rgb(255, 255, 255);
     background: #1761AA;

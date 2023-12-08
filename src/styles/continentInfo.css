@@ -185,20 +185,16 @@ html, body {
     }
 
     #containerBasis{
-        max-width: fit-content;
         height: 40vh;
     }
 
     .basisInfoBullet li {
-        padding-left: 4vw; 
-        background: url('../images/leafIcon.png') no-repeat left top;
         background-size: 1.8vw 2vh; 
-        margin-bottom: 10px;
     }
 
     #changesImage{
         width: 47vw;
-        height: 36vh;
+        height: 35vh;
         margin-top: -30vh;
     }
 
@@ -207,6 +203,25 @@ html, body {
     }
 
     #impact{
-        height: 20vh;
+        margin-top: -5vh;
+        height: 25vh;
+    }
+
+    #impBtn{
+        font-size: 2.5vw;
+        width: 20vw;
+        height: 7vh;
+        margin-top: 0vh;
+        margin-bottom: 10vh;
+    }
+
+    #impactUL, #infoChanges{
+        font-size: 1.8vw;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1980px){
+    #impact{
+        height: 40vh;
     }
 }
