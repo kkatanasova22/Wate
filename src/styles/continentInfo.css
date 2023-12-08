@@ -11,32 +11,31 @@
 }
 
 *{
-    /* background-color: #F3FAFF; */
     padding: 0;
     font-family: Graphik;
     background: #F3FAFF;
 }
 
+html, body {
+    scroll-behavior: smooth;
+  }
 
-/* width */
+
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
 #containerBasis{
     max-width: fit-content;
@@ -113,7 +112,7 @@
 
 #changesImage{
     position: relative;
-    width: 57vw; /*68*/
+    width: 57vw;
     height: 68.6vh;
     opacity: 0.4;
 
@@ -164,5 +163,50 @@
 
     background: rgba(0, 0, 0, 0.00);
     margin-left: 8vw;
-    margin-top: -40vh;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+
+    transition: 0.25s ease-in-out;
+}
+
+#impBtn:hover{
+    color: white;
+    background-color: #1761AA;
+    border: 2px solid #1761AA;
+
+}
+
+/*1/2 screen*/
+
+@media screen and (min-width: 368px) and (max-width: 1591px){    
+    #continentMap{
+        width: 66vw;
+        height: 60vh;
+    }
+
+    #containerBasis{
+        max-width: fit-content;
+        height: 40vh;
+    }
+
+    .basisInfoBullet li {
+        padding-left: 4vw; 
+        background: url('../images/leafIcon.png') no-repeat left top;
+        background-size: 1.8vw 2vh; 
+        margin-bottom: 10px;
+    }
+
+    #changesImage{
+        width: 47vw;
+        height: 36vh;
+        margin-top: -30vh;
+    }
+
+    #change, #individual{
+        height: 30vh;
+    }
+
+    #impact{
+        height: 20vh;
+    }
 }
