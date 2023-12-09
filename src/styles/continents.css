@@ -9,3 +9,124 @@
     background: black;
     color: white;
 }
+
+*{
+    background: #F3FAFF;
+    font-family: Graphik;
+}
+
+#selectHeading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3vw;
+}
+
+.bringBack {
+    position: absolute;
+    left: 0;
+    top: 2vh;
+    margin: auto;
+    width: 5vw;
+    height: 10vh;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    transition-property: color, opacity;
+    transition-duration: 0.2s;
+}
+
+.innerCircle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1vh;
+    margin: auto;
+    width: 0.3vw;
+    height: 0.7vh;
+    border-radius: 50%;
+    background: #000000;
+    opacity: 0;
+    transform: scale(0.5);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    z-index: 3;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1.4vw;
+    height: 2.5vh;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    z-index: 2;
+}
+
+.lineBetween {
+    position: absolute;
+    top: 1.6vw;
+    left: 0;
+    right: 0;
+    bottom: 2vw;
+    margin: auto;
+    width: 1px;
+    background: #000000;
+    transition-duration: 0.3s;
+    z-index: 1;
+}
+
+.point {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0.5vw;
+    height: 1vh;
+    border-radius: 50%;
+    background: #000000;
+    transition: transform 0.3s;
+    z-index: 0;
+}
+
+.lineBetween {
+    animation: lineBetween cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+}
+
+.point {
+    animation: point cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+}
+
+.circle {
+    animation: circle cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.1s backwards;
+}
+
+.lineBetween,
+.point,
+.innerCircle {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.bringBack:hover .lineBetween,
+.bringBack:hover .point {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.bringBack:hover .innerCircle {
+  opacity: 1;
+}
+
+.bringBack:not(:hover) .lineBetween,
+.bringBack:not(:hover) .point {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.bringBack:not(:hover) .innerCircle {
+  opacity: 0;
+}
