@@ -11,14 +11,9 @@
 }
 
 *{
+    padding: 0;
     background: #F3FAFF;
     font-family: Graphik;
-}
-
-#selectHeading{
-    text-align: center;
-    font-weight: 700;
-    font-size: 3vw;
 }
 
 .bringBack {
@@ -129,4 +124,21 @@
 
 .bringBack:not(:hover) .innerCircle {
   opacity: 0;
+}
+
+#selectHeading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+#earthContainer{
+    width: 35vw;
+    height: 70vh;
+    background: url(https://cdn.discordapp.com/attachments/1103246649075171390/1183098340704002100/x7197h0w-removebg-preview_1_2.png?ex=65871931&is=6574a431&hm=162f803be6c2e022c40537f6b68389b83a855cbf8745901c982625bea1f88ce3&);
+    margin: 0 auto;
+    margin-top: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
