@@ -20,8 +20,8 @@ body{
 }
 
 #leftCoins{
-    width: 44rem;
-    height: 40rem;
+    width: 36vw;
+    height: 64vh;
     user-select: none;
     position: fixed;
     bottom: 0;
@@ -29,20 +29,20 @@ body{
 }
 
 #rightCoins{
-    width: 43rem;
-    height: 36rem;
+    width: 36vw;
+    height: 58vh;
     position: fixed;
-    right: -3rem;
-    top: -4rem;
+    right: -2.5vw;
+    top: -3vw;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 #coins {
-    margin-top: 18rem;
-    margin-left: 30rem;
+    margin-top: 15vw;
+    margin-left: 25vw;
     font-family: Graphik;
-    font-size: 4.5rem;
+    font-size: 3.7vw;
     font-weight: 600;
 }
 
@@ -52,16 +52,16 @@ body{
 
 #earnBt{
     margin-top: 1rem;
-    margin-left: 45rem;
+    margin-left: 37.5vw;
     border-radius: 1.625rem;
     border: 2px solid #1761AA;
     background: rgba(0, 0, 0, 0.00);
     color: #1761AA;
     transition: background-color 0.25s ease-in-out;
-    width: 29rem;
-    height: 7rem;
+    width: 24vw;
+    height: 6vw;
     font-family: Graphik;
-    font-size: 4rem;
+    font-size: 3vw;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
@@ -75,17 +75,17 @@ body{
 }
 
 #resetScoreButton{
-    margin-top: 2rem;
-    margin-left: 50rem;
+    margin-top: 2vw;
+    margin-left: 42vw;
     transition: background-color 0.25s ease-in-out;
     border-radius: 1.25rem;
     border: 2px solid #1761AA;
     background: rgba(208, 220, 219, 0.26);
-    width: 19.1875rem;
-    height: 4.375rem;
+    width: 16vw;
+    height: 3.5vw;
     color: #1761AA;
     font-family: Graphik;
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 400;
     cursor: pointer;
     user-select: none;
@@ -97,4 +97,40 @@ body{
     border: 2px solid #1761AA;
     transition: 0.25s ease-in-out;
     user-select: none;
+}
+
+@media screen and (min-width: 368px) and (max-width: 1591px){
+    #container{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #leftCoins{
+        width: 55vw;
+        height: 55vh;
+    }
+
+    #rightCoins{
+        width: 45vw;
+        height: 35vh;
+    }
+
+    #coins{
+        font-size: 6vw;
+        margin-left: 10vw;
+    }
+    
+    #earnBt{
+        width: 30vw;
+        height: 9vh;
+        font-size: 4vw;
+    }
+
+    #resetScoreButton{
+        width: 20vw;
+        height: 5vh;
+        font-size: 3vw;
+    }
 }
