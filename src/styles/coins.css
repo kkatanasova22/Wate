@@ -101,7 +101,7 @@ body{
 
 /* 1/2 screen */
 
-@media screen and (min-width: 368px) and (max-width: 1591px){
+@media screen and (min-width: 368px) and (max-width: 1100px){
     #container{
         position: absolute;
         top: 40%;
