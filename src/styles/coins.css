@@ -99,6 +99,8 @@ body{
     user-select: none;
 }
 
+/* 1/2 screen */
+
 @media screen and (min-width: 368px) and (max-width: 1591px){
     #container{
         position: absolute;
