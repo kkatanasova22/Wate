@@ -53,7 +53,7 @@ body{
 #earnBt{
     margin-top: 1rem;
     margin-left: 37.5vw;
-    border-radius: 1.625rem;
+    border-radius: 1.3vw;
     border: 2px solid #1761AA;
     background: rgba(0, 0, 0, 0.00);
     color: #1761AA;
@@ -78,7 +78,7 @@ body{
     margin-top: 2vw;
     margin-left: 42vw;
     transition: background-color 0.25s ease-in-out;
-    border-radius: 1.25rem;
+    border-radius: 1vw;
     border: 2px solid #1761AA;
     background: rgba(208, 220, 219, 0.26);
     width: 16vw;
@@ -134,5 +134,35 @@ body{
         width: 20vw;
         height: 5vh;
         font-size: 3vw;
+    }
+}
+
+/* Small devices (phones)  */
+@media screen and (max-width: 767px) {
+    #rightCoins{
+        height: 30vh;
+        width: 85vw;
+    }
+
+    #leftCoins{
+        height: 45vh;
+        width: 100vw;
+    }
+
+    #coins{
+        font-size: 9vw;
+        margin-left: 1vw;
+        margin-bottom: -1vw;
+    }
+
+    #earnBt{
+        height: 6vh;
+        width: 40vw;
+        font-size: 5.5vw;
+    }
+
+    #resetScoreButton{
+        width: 30vw;
+        font-size: 4vw;
     }
 }
