@@ -36,12 +36,15 @@ loader.load('../models/sun.glb', (gltf) => {
   scene.add(model2);
   animate();
 });
+let autoTheme;
+if(autoTheme == true) {
+  applySystemDefault();
+}
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themeIndicator = document.getElementById("themeIndicator");
 const translateIcon = document.getElementById("translateIcon");
 let body = document.querySelector("body");
 let elementsToStyle = document.querySelectorAll("#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb");
-applySystemDefault();
 function applyDarkMode() {
   const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
   scene.background = darkTexture;
@@ -70,24 +73,29 @@ translateIcon.onclick = function () {
 function applySystemDefault() {
   const storedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  if (storedTheme === 'dark') {
+  if (prefersDark) {
     applyDarkMode();
     themeIndicator.textContent = 'selected: system (dark)';
-  } else if (storedTheme === 'light') {
+  } else if (!prefersDark) {
     applyLightMode();
     themeIndicator.textContent = 'selected: system (light)';
-  } else {
-    if (prefersDark) {
-      applyDarkMode();
-      themeIndicator.textContent = 'selected: system (dark)';
-    } else {
-      applyLightMode();
-      themeIndicator.textContent = 'selected: system (light)';
-    }
+  }
+  localStorage.setItem('theme', 'automatic');
+}
+function applyStoredTheme() {
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme === 'dark') {
+    applyDarkMode();
+    themeIndicator.textContent = 'selected: dark';
+  } else if (storedTheme === 'light') {
+    applyLightMode();
+    themeIndicator.textContent = 'selected: light';
+  }
+  else if (storedTheme === 'automatic') {
+    applySystemDefault();
   }
 }
-
+applyStoredTheme();
 const themeSelect = document.querySelector('.themeSelect');
 themeSelect.addEventListener('mouseover', () => {
   themeIndicator.style.opacity = '1';
@@ -102,13 +110,6 @@ function updateHamburgerColor(isDarkMode, isMenuOpen) {
   const iconColor = isMenuOpen ? 'black' : (isDarkMode ? 'white' : 'black');
   hamb.innerHTML = iconText;
   hamb.style.color = iconColor;
-}
-function setMode(mode) {
-  if (mode === 'dark') {
-    applyDarkMode();
-  } else {
-    applyLightMode();
-  }
 }
 
 document.getElementById("selectDark").onclick = function () {
