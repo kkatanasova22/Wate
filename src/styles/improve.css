@@ -23,3 +23,26 @@ body{
     margin-top: 4vh;
     margin-left: 6vw;
 }
+
+#smallTexts {
+    margin: 0 auto;
+    margin-top: 1vh;
+    width: 70vw;
+    display: flex; 
+    justify-content: space-between;
+    font-size: 1.3vw;
+}
+
+#choose {
+    text-align: left;
+}
+
+#purchaseText {
+    text-align: right;
+}
+
+hr{
+    margin-top: 2vh;
+    max-width: 72vw;
+    margin-left: 15vw;
+}
