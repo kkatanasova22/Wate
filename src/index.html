@@ -1,38 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <audio autoplay loop src="misc/eternity.mp3"></audio>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <title>Wate</title>
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
-    <script type="module" src="/JS/main.js"></script>
-    <div class="container">
-      <div class="coinLink">
-        <span class="material-symbols-outlined" id="chevronLeft">chevron_left</span>
-        <a class="smalltext rotatedLeft" href="pages/coins.html">COINS</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <script type="module" src="JS/main.js"></script>
+  <div class="container">
+    <div class="coinLink">
+      <span class="material-symbols-outlined" id="chevronLeft">chevron_left</span>
+      <a class="smalltext rotatedLeft" href="pages/coins.html">COINS</a>
+    </div>
+    <div class="plantLink">
+      <a class="smalltext rotatedRight" href="pages/game.html">PLANT</a>
+      <span class="material-symbols-outlined" id="chevronRight">chevron_right</span>
+    </div>
+    <div class="earthCaption">
+      <h1 id="heading">Wate</h1>
+      <h6 id="fineprint">GREEN CHALLENGES</h6>
+    </div>
+    <span class="material-symbols-outlined" id="hamb">menu</span>
+    <div class="menu">
+      <div class="socialIcons">
+        <img src="misc/instagram.png" id="instagram">
+        <img src="misc/facebook.png" id="facebook">
+        <img src="misc/twitter.png" id="twitter">
+        <img src="misc/email.png" id="email">
       </div>
-      <div class="plantLink">
-        <a class="smalltext rotatedRight" href="pages/game.html">PLANT</a>
-        <span class="material-symbols-outlined" id="chevronRight">chevron_right</span>
+      <h1 id="themeIndicator"></h1>
+      <img src="misc/translate.svg" id="translateIcon">
+      <div class="sideIcons">
+        <div class="iconContainer" id="coinSc">
+          <img src="misc/coins.svg">
+          <span class="iconText">COINS</span>
+        </div>
+        <div class="iconContainer" id="gameSc">
+          <img src="misc/game.svg">
+          <span class="iconText">PLAY GAME</span>
+        </div>
+        <div class="iconContainer" id="climSc">
+          <img src="misc/thermometer.svg">
+          <span class="iconText">CLIMATE</span>
+        </div>
+        <div class="iconContainer" id="neshtosiSc">
+          <img src="misc/pin.svg">
+          <span class="iconText">CONTINENTS</span>
+        </div>
       </div>
-      <div class="earthCaption">
-        <h1 id="heading">Wate</h1>
-        <h6 id="fineprint">GREEN CHALLENGES</h6>
-      </div>
-      <span class="material-symbols-outlined" id="hamb">menu</span>
-      <div class="menu">
-        <div class="themeSelect">
-          <img src="misc/moon.svg" id="selectDark">
-          <span class="separator"></span> 
-          <img src="misc/sun.svg" id="selectLight">
-          <span class="separator"></span>
-          <img src="misc/systemDefault.svg" id="selectDefault">
-      </div>
+      <div class="themeSelect">
+        <img src="misc/moon.svg" id="selectDark">
+        <span class="separator"></span> 
+        <img src="misc/sun.svg" id="selectLight">
+        <span class="separator"></span>
+        <img src="misc/systemDefault.svg" id="selectDefault">
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

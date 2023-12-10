@@ -37,10 +37,11 @@ loader.load('../models/sun.glb', (gltf) => {
   animate();
 });
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const themeIndicator = document.getElementById("themeIndicator");
+const translateIcon = document.getElementById("translateIcon");
 let body = document.querySelector("body");
 let elementsToStyle = document.querySelectorAll("#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb");
 applySystemDefault();
-
 function applyDarkMode() {
   const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
   scene.background = darkTexture;
@@ -48,9 +49,10 @@ function applyDarkMode() {
   elementsToStyle.forEach(element => {
     element.style.color = "white";
   });
-  updateHamburgerColor(true);
+  localStorage.setItem('theme', 'dark');
+  updateHamburgerColor(true, document.querySelector('.menu').classList.contains('open'));
+  themeIndicator.textContent = 'selected: dark';
 }
-
 function applyLightMode() {
   const lightTexture = new THREE.TextureLoader().load('../misc/lightbg.png');
   scene.background = lightTexture;
@@ -58,27 +60,49 @@ function applyLightMode() {
   elementsToStyle.forEach(element => {
     element.style.color = "black";
   });
-  updateHamburgerColor(false);
+  localStorage.setItem('theme', 'light');
+  updateHamburgerColor(false, document.querySelector('.menu').classList.contains('open'));
+  themeIndicator.textContent = 'selected: light';
 }
-
+translateIcon.onclick = function () {
+  window.location.href = "pages/coins.html";
+};
 function applySystemDefault() {
+  const storedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (prefersDark) {
+
+  if (storedTheme === 'dark') {
     applyDarkMode();
-  } else {
+    themeIndicator.textContent = 'selected: system (dark)';
+  } else if (storedTheme === 'light') {
     applyLightMode();
+    themeIndicator.textContent = 'selected: system (light)';
+  } else {
+    if (prefersDark) {
+      applyDarkMode();
+      themeIndicator.textContent = 'selected: system (dark)';
+    } else {
+      applyLightMode();
+      themeIndicator.textContent = 'selected: system (light)';
+    }
   }
 }
 
+const themeSelect = document.querySelector('.themeSelect');
+themeSelect.addEventListener('mouseover', () => {
+  themeIndicator.style.opacity = '1';
+});
+themeSelect.addEventListener('mouseout', () => {
+  themeIndicator.style.opacity = '0';
+});
+
 function updateHamburgerColor(isDarkMode, isMenuOpen) {
   const hamb = document.querySelector('#hamb');
-  const iconText = isDarkMode ? "menu" : "close";
+  const iconText = isMenuOpen ? "close" : "menu";
   const iconColor = isMenuOpen ? 'black' : (isDarkMode ? 'white' : 'black');
-
-  hamb.innerHTML = isMenuOpen ? "close" : iconText;
+  hamb.innerHTML = iconText;
   hamb.style.color = iconColor;
 }
-
 function setMode(mode) {
   if (mode === 'dark') {
     applyDarkMode();
@@ -101,6 +125,13 @@ document.getElementById("hamb").onclick = function () {
   const isMenuOpen = menu.classList.toggle('open');
   const darkMode = body.classList.contains("dark-mode");
   updateHamburgerColor(darkMode, isMenuOpen);
+  if (!isMenuOpen) {
+    setTimeout(() => {
+      menu.style.zIndex = "-1";
+    }, 250);
+  } else {
+    menu.style.zIndex = "0";
+  }
 };
 
 function rotateEarth() {
@@ -129,5 +160,36 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
+const iconContainers = document.querySelectorAll('.iconContainer');
+function calculateVwWidth(text) {
+  const fontSize = parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+  const textLength = text.length;
+  const vwWidth = (textLength * fontSize) / window.innerWidth * 140;
+  return vwWidth;
+}
+iconContainers.forEach(container => {
+  const iconText = container.querySelector('.iconText');
+  container.addEventListener('mouseenter', () => {
+      const vwWidth = calculateVwWidth(iconText.textContent);
+      iconText.style.width = `${vwWidth}vw`;
+      iconText.style.opacity = '1';
+  });
+  container.addEventListener('mouseleave', () => {
+      iconText.style.width = '0';
+      iconText.style.opacity = '0';
+  });
+});
+document.getElementById("coinSc").onclick = function () {
+  window.location.href = "pages/coins.html";
+};
+document.getElementById("gameSc").onclick = function () {
+  window.location.href = "pages/game.html";
+};
+document.getElementById("climSc").onclick = function () {
+  window.location.href = "pages/globalWarming.html";
+};
+document.getElementById("coinSc").onclick = function () {
+  window.location.href = "pages/coins.html";
+};
 
 animate();
