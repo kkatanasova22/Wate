@@ -62,7 +62,7 @@ hr{
 .improvement {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center items vertically */
+    align-items: center;
     margin-left: 4vw;
     width: 83%;
     height: 20vh;
