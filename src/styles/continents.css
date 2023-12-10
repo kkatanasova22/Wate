@@ -180,6 +180,7 @@ body{
     height: 1.7px;
     background: #000000;
     margin-right: 1vw;
+    margin-left: 0.5vw;
 }
 
 .pointContinent {
@@ -199,4 +200,16 @@ a, a:active, a::before {
     position: relative;
     top: -5vh;
     right: 7vw;
+}
+
+#europe{
+    position: relative;
+    top: -15vh;
+    left: 18vw;
+}
+
+#rightLine{
+    width: 10vw;
+    margin-left: 1vw;
+    align-items: center;
 }
