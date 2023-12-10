@@ -237,3 +237,9 @@ a, a:active, a::before {
     top: 5vh;
     left: 31.5vw;
 }
+
+#antarctica{
+    position: relative;
+    top: 15vh;
+    left: 20vw;
+}
