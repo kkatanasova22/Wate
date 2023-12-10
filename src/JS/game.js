@@ -10,20 +10,15 @@ function setGame() {
 
     coinsHolder.innerText = ballance;
 
-    if(checkTree.length == 0 || checkTree == 'undefined')
-    {
+    if (checkTree == null || checkTree.length == 0 || checkTree == 'undefined') {
         localStorage.setItem("currentTree", "Default");
-      
-
         checkTree = localStorage.getItem("currentTree");
     }
 
-    if(checkTree == "Default")
-    {
+    if (checkTree == "Default") {
         treeSource = "../images/tree.png";
     }
-    if(checkTree == "Cherry")
-    {
+    if (checkTree == "Cherry") {
         treeSource = "../images/cherryTree.png";
     }
 
@@ -48,15 +43,12 @@ function setGame() {
 
     for (let i = 0; i < 8; i++) {
         let tree = document.createElement("div");
-        // tree.setAttribute('class', 'treesContainer');
         let newTree = treeConst.cloneNode();
         newTree.setAttribute('id', 'treeConst' + i);
-        // newTree.setAttribute('class', 'treesContainer');
         document.getElementById("trees").appendChild(newTree);
         newTree.draggable = true;
         newTree.addEventListener("dragstart", dragStart);
     }
-
 
     if (localStorage.getItem('dark')) {
         document.body.classList.add('dark');
@@ -65,29 +57,27 @@ function setGame() {
     function dragStart(event) {
         event.dataTransfer.setData("text/plain", event.target.id);
     }
-    
+
     function dragOver(event) {
         event.preventDefault();
     }
-    
+
     function drop(event) {
         event.preventDefault();
         console.log("test")
-    
+
         let data = event.dataTransfer.getData("text/plain");
-    
+
         let draggedElement = document.getElementById(data);
-    
+
         if (event.target.classList.contains("soils")) {
             draggedElement.parentNode.removeChild(draggedElement);
-    
+
             event.target.appendChild(draggedElement);
-    
+
             ballance += 20 
             coinsHolder.innerText = ballance;
             localStorage.setItem("coins", ballance.toString());
         }
     }
 }
-
-
