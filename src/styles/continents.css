@@ -12,8 +12,11 @@
 
 *{
     padding: 0;
-    background: #F3FAFF;
     font-family: Graphik;
+}
+
+body{
+    background: #F3FAFF;
 }
 
 .bringBack {
@@ -136,9 +139,59 @@
 #earthContainer{
     width: 35vw;
     height: 70vh;
-    background: url(https://cdn.discordapp.com/attachments/1103246649075171390/1183098340704002100/x7197h0w-removebg-preview_1_2.png?ex=65871931&is=6574a431&hm=162f803be6c2e022c40537f6b68389b83a855cbf8745901c982625bea1f88ce3&);
+    background: url(../images/earth.png);
     margin: 0 auto;
     margin-top: 10vh;
     background-size: contain;
     background-repeat: no-repeat;
+
+    /*  */
+}
+
+#southAmerica {
+    position: relative;
+    top: 50%;
+    right: 14vw;
+    background: transparent;
+}
+
+.pointLineContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.leftContinent,
+.lineContinent {
+    background: transparent;
+    margin-right: 1vw; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pointLineContainer:hover .lineContinent,
+.pointLineContainer:hover .leftContinent {
+    opacity: 1;
+}
+
+.lineContinent {
+    width: 2vw;
+    height: 1.7px;
+    background: #000000;
+    margin-right: 1vw;
+}
+
+.pointContinent {
+    background: #000000;
+    border-radius: 50%;
+    width: 0.3vw;
+    height: 0.6vh;
+    cursor: pointer;
+}
+
+a, a:active, a::before { /* Add this selector for the specific <a> in .leftContinent */
+    text-decoration: none !important;
+    color: #000000 !important;
 }
