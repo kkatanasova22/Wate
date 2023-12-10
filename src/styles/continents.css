@@ -219,3 +219,15 @@ a, a:active, a::before {
     top: -15vh;
     left: 30vw; 
 }
+
+#africa{
+    position: relative;
+    top: 1vh;
+    left: 20vw;
+}
+
+#africaLine{
+    width: 15vw;
+    margin-left: 1vw;
+    align-items: center;
+}
