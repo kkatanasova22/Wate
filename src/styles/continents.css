@@ -145,6 +145,15 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
 
+@media (max-width: 600px){
+    transform: scale(0.5);
+}
+@media (max-width: 900px){
+    transform: scale(0.8);
+}
+
+
+
     /*  */
 }
 
@@ -229,6 +238,7 @@ a, a:active, a::before {
 #africaLine{
     width: 15vw;
     margin-left: 1vw;
+    height: 1.7px;
     align-items: center;
 }
 

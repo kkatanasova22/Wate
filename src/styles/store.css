@@ -6,7 +6,7 @@
 * {
     margin: 0 auto;
     padding: 0;
-    background-color: #F6F4EB;
+    /* background-color: #F6F4EB; */
     font-family: Graphik;
 }
 
@@ -95,7 +95,7 @@ a{
 
 .smallCard:last-child{
     margin-top: 1.5rem;
-    background: url(../images/faiskoTree.png) center center no-repeat rgba(226, 226, 226, 0.90);
+    background: url(../images/cherryTree.png) center center no-repeat rgba(226, 226, 226, 0.90);
     background-repeat: no-repeat;
     z-index: 1;
 }

@@ -2,13 +2,41 @@ window.onload = setGame;
 let coins = 0;
 
 function setGame() {
-    const treeConst = document.getElementById("treeConst");
+    let treeSource;
+    let checkTree = localStorage.getItem("currentTree");
+    let earnerdCoins = localStorage.getItem("coins");
+    let coinsHolder = document.getElementById('earnerdCoins');
+    let ballance = +earnerdCoins;
+
+    coinsHolder.innerText = ballance;
+
+    if(checkTree.length == 0 || checkTree == 'undefined')
+    {
+        localStorage.setItem("currentTree", "Default");
+      
+
+        checkTree = localStorage.getItem("currentTree");
+    }
+
+    if(checkTree == "Default")
+    {
+        treeSource = "../images/tree.png";
+    }
+    if(checkTree == "Cherry")
+    {
+        treeSource = "../images/cherryTree.png";
+    }
+
+    localStorage.getItem("currentTree", "treeOne");
+    const treeConst = document.getElementsByClassName("treeConst")[0];
+
+    treeConst.src = treeSource;
+    treeConst.id = 'someId'
     treeConst.draggable = true;
     treeConst.addEventListener("dragstart", dragStart);
 
     const container = document.getElementById("soilContainer");
     container.addEventListener("dragover", dragOver);
-    container.addEventListener("drop", drop);
 
     for (let i = 0; i < 9; i++) {
         let soil = document.createElement("div");
@@ -20,52 +48,46 @@ function setGame() {
 
     for (let i = 0; i < 8; i++) {
         let tree = document.createElement("div");
-        tree.setAttribute('class', 'treesContainer');
-        tree.setAttribute('id', 'tree' + i);
-        tree.draggable = true;
-        tree.addEventListener("dragstart", dragStart);
-        document.getElementById("trees").appendChild(tree);
+        // tree.setAttribute('class', 'treesContainer');
+        let newTree = treeConst.cloneNode();
+        newTree.setAttribute('id', 'treeConst' + i);
+        // newTree.setAttribute('class', 'treesContainer');
+        document.getElementById("trees").appendChild(newTree);
+        newTree.draggable = true;
+        newTree.addEventListener("dragstart", dragStart);
     }
 
-    coins = parseInt(localStorage.getItem("coins")) || 0;
-
-    updateCoinsInParentWindow();
 
     if (localStorage.getItem('dark')) {
         document.body.classList.add('dark');
     }
-}
 
-function dragStart(event) {
-    event.dataTransfer.setData("text/plain", event.target.id);
-}
-
-function dragOver(event) {
-    event.preventDefault();
-}
-
-function drop(event) {
-    event.preventDefault();
-
-    let data = event.dataTransfer.getData("text/plain");
-
-    let draggedElement = document.getElementById(data);
-
-    if (event.target.classList.contains("soils")) {
-        draggedElement.parentNode.removeChild(draggedElement);
-
-        event.target.appendChild(draggedElement);
-
-        coins += 10;
-
-        updateCoinsInParentWindow();
-
-        localStorage.setItem("coins", coins.toString());
+    function dragStart(event) {
+        event.dataTransfer.setData("text/plain", event.target.id);
+    }
+    
+    function dragOver(event) {
+        event.preventDefault();
+    }
+    
+    function drop(event) {
+        event.preventDefault();
+        console.log("test")
+    
+        let data = event.dataTransfer.getData("text/plain");
+    
+        let draggedElement = document.getElementById(data);
+    
+        if (event.target.classList.contains("soils")) {
+            draggedElement.parentNode.removeChild(draggedElement);
+    
+            event.target.appendChild(draggedElement);
+    
+            ballance += 20 
+            coinsHolder.innerText = ballance;
+            localStorage.setItem("coins", ballance.toString());
+        }
     }
 }
 
-function updateCoinsInParentWindow() {
-    if (window.opener && !window.opener.closed) {
-        window.opener.updateCoinsHeading(coins);
-    }
-}
+
