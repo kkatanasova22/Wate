@@ -1,6 +1,8 @@
 @font-face {
     font-family: Graphik;
     src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikBold.otf);
+    src: url(../fonts/GraphikSuper.otf);
     src: url(../fonts/GraphikMedium.otf);
     src: url(../fonts/GraphikRegular.otf);
 }
@@ -8,8 +10,16 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Graphik;
 }
 
 body{
     background: #F3FAFF;
+}
+
+#improveHeading{
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-top: 4vh;
+    margin-left: 6vw;
 }
