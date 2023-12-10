@@ -152,7 +152,6 @@ body{
     position: relative;
     top: 50%;
     right: 14vw;
-    background: transparent;
 }
 
 .pointLineContainer {
@@ -191,7 +190,13 @@ body{
     cursor: pointer;
 }
 
-a, a:active, a::before { /* Add this selector for the specific <a> in .leftContinent */
-    text-decoration: none !important;
-    color: #000000 !important;
+a, a:active, a::before { 
+    text-decoration: none;
+    color: #000000;
+}
+
+#northAmerica{
+    position: relative;
+    top: -5vh;
+    right: 7vw;
 }
