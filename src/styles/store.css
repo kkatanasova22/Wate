@@ -150,3 +150,10 @@ a{
     background-size: contain;
     background-position: center 30%;
 }
+
+.bigCard:nth-child(2)
+{
+    background: url(../images/dirtySoil.png) no-repeat rgba(226, 226, 226, 0.90);
+    background-size: 120%;
+    background-position: center 30%;
+}
