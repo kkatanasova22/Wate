@@ -205,9 +205,10 @@ hr{
         font-size: 10vw;
     }
 
-    .improvement > button{
-        transform: scale(1.2);
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
+    .improvement > button {
+        height: 3vh;
+        font-size: 2.5vw;
+        width: 25vw;
+        margin-left: 2vw;
+    }    
 }
