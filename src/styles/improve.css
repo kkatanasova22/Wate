@@ -82,8 +82,8 @@ hr{
     font-weight: 300;
     margin-top: 2vh;
     margin-left: 1vw;
-    max-width: 20vw;
-    font-size: 1vw;
+    max-width: 25vw;
+    font-size: 1.2vw;
 }
 
 .textInside > h1 {
@@ -134,4 +134,39 @@ hr{
     background-size: 70%;
     width: 100%;
     height: 100%;
+}
+
+@media screen and (min-width: 368px) and (max-width: 1391px){
+    #solarImg{
+        background-size: 130%;
+    }
+
+    #gardenImg, #transportImg{
+        background-size: 80%;
+    }
+
+    .image{
+        height: 15vh;
+    }
+
+    .textInside > p{
+        font-size: 1.8vw;
+        max-width: 40vw;
+    }
+
+    #choose{
+        margin-top: 1vh;
+        font-size: 3vw;
+    }
+
+    #purchaseText{
+        font-size: 3vw;
+    }
+
+    .improvement > button{
+        transform: scale(1.2);
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
 }
