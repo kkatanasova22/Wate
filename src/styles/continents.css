@@ -17,11 +17,12 @@
 
 body{
     background: #F3FAFF;
+    overflow: hidden;
 }
 
 .bringBack {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 2vh;
     margin: auto;
     width: 5vw;

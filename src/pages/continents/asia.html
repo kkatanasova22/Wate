@@ -3,59 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wate</title>
+    <title></title>
     <link rel="stylesheet" href="../../styles/continentInfo.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 </head>
 <body>
-    <div id="containerBasis">
-        <h1 id="heading">About Global<br> warming in <span id="bold">Asia</span></h1>
-        <img src="../../images/asiaMap.png" alt="Asia Map" id="continentMap">
-    </div>
-
-    <hr id="separator">
-
-    <div id="containerBasisInfo">
-        <div id="change">
-            <h1 id="changes">Changes</h1>
-            <ul class="basisInfoBullet" id="changeUL">
-                <li id="infoChanges">The Himalayan glaciers are melting, impacting water resources for millions of people in the region. Changes in monsoon patterns affect agriculture.</li>
-            </ul>
-
-            <img class="changesImage" src="../../images/upperImage.png" alt="Changes' image">
+    <div class="container">
+        <span class="material-symbols-outlined" id="hamb">menu</span>
+        <div id="containerBasis">
+            <h1 id="continentHeading">About Global<br> warming in <span id="bold">Asia</span></h1>
+            <img src="../../images/asiaMap.png" alt="Asia Map" id="continentMap">
         </div>
-
+        <hr id="separator">
+        <div id="containerBasisInfo" class="container">
+            <div id="change">
+                <h1 id="changes">Changes</h1>
+                <ul class="basisInfoBullet" id="changeUL">
+                    <li id="infoChanges">The Himalayan glaciers are melting, impacting water resources for millions of people in the region. Changes in monsoon patterns affect agriculture.</li>
+                </ul>
+                <img class="changesImage" src="../../images/upperImage.png" alt="Changes' image">
+            </div>
             <div id="impact">
                 <h1 id="impacts">Impacts</h1>
                 <ul class="basisInfoBullet" id="impactUL">
                     <li>Rising sea levels threaten densely populated coastal areas, and there are concerns about more intense cyclones in regions like Southeast Asia.</li>
                 </ul>
             </div>
-    </div>
+        </div>
 
-    <hr id="separator">
+        <hr id="separator">
 
-    <div id="howHelp">
-        <h1 id="how">How can we help?</h1>
+        <div id="howHelp" class="container">
+            <h1 id="how">How can we help?</h1>
+            <div id="containerBasisInfo">
+                <div id="individual">
+                    <h1 id="individuals">As an individual</h1>
+                    <ul class="basisInfoBullet" id="changeUL">
+                        <li id="infoChanges">Use public transportation, cycle, or walk instead of relying on personal vehicles. Embrace a circular economy by reducing, reusing, and recycling.</li>
+                    </ul>
+                    <img class="changesImage" src="https://cdn.discordapp.com/attachments/723998679400316949/1182441960275972156/bottomImage.png?ex=6584b5e4&is=657240e4&hm=3869c6a1e20176abee39da238c59bde2e7e3b763b5ae4781f2b306524b898c6d&" alt="Changes' image">
+                </div>
 
-        <div id="containerBasisInfo">
-            <div id="individual">
-                <h1 id="individuals">As an individual</h1>
-                <ul class="basisInfoBullet" id="changeUL">
-                    <li id="infoChanges">Use public transportation, cycle, or walk instead of relying on personal vehicles. Embrace a circular economy by reducing, reusing, and recycling.</li>
-                </ul>
-    
-                <img class="changesImage" src="https://cdn.discordapp.com/attachments/723998679400316949/1182441960275972156/bottomImage.png?ex=6584b5e4&is=657240e4&hm=3869c6a1e20176abee39da238c59bde2e7e3b763b5ae4781f2b306524b898c6d&" alt="Changes' image">
-            </div>
-    
                 <div id="community">
                     <h1 id="communities">As a community</h1>
                     <ul class="basisInfoBullet" id="impactUL">
                         <li>Engage in community gardens, promote local and sustainable food production, and support renewable energy initiatives. Advocate for stronger environmental regulations.</li>
                     </ul>
                 </div>
+            </div>
+            <button id="impBtn">Improve</button>
         </div>
-
-        <button id="impBtn">Improve</button>
+        <div class="menu">
+            <div class="socialIcons">
+              <img src="../../misc/instagram.png" id="instagram">
+              <img src="../../misc/facebook.png" id="facebook">
+              <img src="../../misc/twitter.png" id="twitter">
+              <img src="../../misc/email.png" id="email">
+            </div>
+            <h1 id="themeIndicator"></h1>
+            <img src="../../misc/translate.svg" id="translateIcon">
+            <div class="sideIcons">
+              <a href="../coins.html"><div class="iconContainer" id="coinSc">
+                <img src="../../misc/coins.svg">
+                <span class="iconText">COINS</span>
+              </div></a>
+              <a href="../game.html"><div class="iconContainer" id="gameSc">
+                <img src="../../misc/game.svg">
+                <span class="iconText">PLAY GAME</span>
+              </div></a>
+              <a href="../globalWarming.html"><div class="iconContainer" id="climateSc">
+                <img src="../../misc/thermometer.svg">
+                <span class="iconText">CLIMATE</span>
+              </div></a>
+              <a href="../continents.html"><div class="iconContainer" id="continentsSc">
+                <img src="../../misc/pin.svg">
+                <span class="iconText">CONTINENTS</span>
+              </div></a>
+            </div>
+            <div class="themeSelect">
+              <img src="../../misc/moon.svg" id="selectDark">
+              <span class="separator"></span> 
+              <img src="../../misc/sun.svg" id="selectLight">
+              <span class="separator"></span>
+              <img src="../../misc/systemDefault.svg" id="selectDefault">
+            </div>
+          </div>
+    </div>
+    <script type="module" src="../../JS/hambMenu.js"></script>
 </body>
 </html>

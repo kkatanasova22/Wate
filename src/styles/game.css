@@ -4,12 +4,16 @@
 }
 
 * {
-    margin: 0 auto;
     padding: 0;
-    background-color: #F6F4EB;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.grouper {
+    margin-top: 20vh;
+    margin-left: 36vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
 .coinLink {
     position: fixed;
     top: 50%;
@@ -18,7 +22,6 @@
     align-items: center;
     font-size: 1.5rem;
 }
-
 #smalltext{
     transform: rotate(-90deg);
 }
@@ -37,7 +40,6 @@ a{
 
 #textContainer{
     margin-left: 5rem;
-    margin-top: 4rem;
     max-width: fit-content;
     float: left;
 }
@@ -53,9 +55,7 @@ a{
 }
 
 #trees{
-    margin-top: 5rem;
-    /* border: 1px solid pink; */
-    margin-left: 10rem;
+    margin-left: 0rem;
     max-width: 25rem;
     float: left;
     
@@ -97,18 +97,13 @@ a{
     display: flex; 
     flex-wrap: wrap;
     margin-right: 18rem;
-    margin-top: 8rem;
     justify-content: space-between;
 }
 
 #soilContainer {
-    margin-top: 9rem;
     background: transparent;
     max-width: 40rem;
-    padding-top: 5rem;
-    margin-top: 5rem;
-    margin-left: 13rem;
-
+    margin-left: 6rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -132,22 +127,6 @@ a{
 {
     margin-top: 1rem;
 }
-
-
-.soils .treesContainer, .soils #treeConst{
-    margin-top: -5rem;
-    margin-left: 1rem;
-}
-
-/* Small devices (phones) */
-/* @media screen and (max-width: 767px) {
-    #container{
-        width: 5rem;
-        height: 5rem;
-    }
-  } */
-  
-  /* Medium devices (tablets) */
   @media screen and (min-width: 768px) and (max-width: 991px) {
     #container{
         margin-top: -3rem;
@@ -168,7 +147,6 @@ a{
     }
 
     #soilContainer {
-        margin-top: 9rem;
         background: transparent;
         max-width: 40rem;
         padding-top: 5rem;
@@ -206,10 +184,10 @@ a{
     }
 
     #trees{
+        position: fixed;
         margin-top: 5rem;
         margin-bottom: 5rem;
         /* border: 1px solid pink; */
-        margin-left: 10rem;
         max-width: 20rem;
         float: left;
         

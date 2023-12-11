@@ -7,13 +7,8 @@ if (savedCoins !== null) {
     coinsDisplay.textContent = "0W";
 }
 
-let resetScoreButton = document.getElementById("resetScoreButton");
+let shopBtn = document.getElementById("shopBtn");
 
-resetScoreButton.addEventListener("click", function() {
-    localStorage.setItem("coins", "0");
-    coinsDisplay.textContent = "0W";
+shopBtn.addEventListener("click", function() {
+    window.location.href = "store.html";
 });
-
-function updateCoinsHeading(coins) {
-    coinsDisplay.textContent = coins + "W";
-}

@@ -3,84 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="../styles/continents.css">
     <title>Wate</title>
 </head>
 <body>
-
-    <a class="bringBack" href="../index.html">
-        <div class="innerCircle"></div>
-        <div class="circle"></div>
-        <div class="lineBetween"></div>
-        <div class="point"></div>
-    </a>
-
-    <h1 id="selectHeading">Select a continent</h1>
-    
-    <div id="earthContainer">
-        <div id="southAmerica">
-            <div class="pointLineContainer">
-                <h1 class="leftContinent"><a href="../pages/continents/southAmerica.html">South America</a></h1>
-                <div class="lineContinent"></div>
+    <div class="container">
+        <span class="material-symbols-outlined" id="hamb">menu</span>
+        <a class="bringBack" href="../index.html">
+            <div class="innerCircle"></div>
+            <div class="circle"></div>
+            <div class="lineBetween"></div>
+            <div class="point"></div>
+        </a>
+        <h1 id="selectHeading">Select a continent</h1>
+        <div id="earthContainer">
+            <div id="southAmerica">
+                <div class="pointLineContainer">
+                    <h1 class="leftContinent"><a href="../pages/continents/southAmerica.html">South America</a></h1>
+                    <div class="lineContinent"></div>
                 <a href="../pages/continents/southAmerica.html"><div class="pointContinent"></div></a>
+                </div>
             </div>
-        </div>
-
-        <div id="northAmerica">
+            <div id="northAmerica">
             <div class="pointLineContainer">
                 <h1 class="leftContinent"><a href="../pages/continents/northAmerica.html">North America</a></h1>
                 <div class="lineContinent"></div>
                 <a href="../pages/continents/northAmerica.html"><div class="pointContinent"></div></a>
             </div>
-        </div>
-
-        <div id="europe">
+            </div>
+            <div id="europe">
             <div class="pointLineContainer">
                 <a href="./continents/europe.html"><div class="pointContinent">
                 </div>
                 <div class="lineContinent" id="rightLine"></div>
                 <h1 class="leftContinent"><a href="./continents/europe.html">Europe</a></h1>
             </div>
-        </div>
-
-        <div id="asia">
+            </div>
+            <div id="asia">
             <div class="pointLineContainer">
                 <a href="./continents/asia.html"><div class="pointContinent">
                 </div>
                 <div class="lineContinent" id="rightLine"></div>
                 <h1 class="leftContinent"><a href="./continents/asia.html">Asia</a></h1>
             </div>
-        </div>
-
-        <div id="africa">
+            </div>
+            <div id="africa">
             <div class="pointLineContainer">
                 <a href="./continents/africa.html"><div class="pointContinent">
                 </div>
                 <div class="lineContinent" id="africaLine"></div>
                 <h1 class="leftContinent"><a href="./continents/africa.html">Africa</a></h1>
             </div>
-        </div>
-
-        <div id="australia">
+            </div>
+            <div id="australia">
             <div class="pointLineContainer">
                 <a href="./continents/australia.html"><div class="pointContinent">
                 </div>
                 <div class="lineContinent" id="rightLine"></div>
                 <h1 class="leftContinent"><a href="./continents/australia.html">Australia</a></h1>
             </div>
-        </div>
-
-        <div id="antarctica">
-            <div class="pointLineContainer">
-                <a href="./continents/antarctica.html"><div class="pointContinent">
+            </div>
+            <div id="antarctica">
+                <div class="pointLineContainer">
+                    <a href="./continents/antarctica.html"><div class="pointContinent">
+                    </div>
+                    <div class="lineContinent" id="rightLine"></div>
+                    <h1 class="leftContinent"><a href="./continents/antarctica.html">Antarctica</a></h1>
                 </div>
-                <div class="lineContinent" id="rightLine"></div>
-                <h1 class="leftContinent"><a href="./continents/antarctica.html">Antarctica</a></h1>
             </div>
         </div>
-        
-        
+        <div class="menu">
+            <div class="socialIcons">
+              <img src="../misc/instagram.png" id="instagram">
+              <img src="../misc/facebook.png" id="facebook">
+              <img src="../misc/twitter.png" id="twitter">
+              <img src="../misc/email.png" id="email">
+            </div>
+            <h1 id="themeIndicator"></h1>
+            <img src="../misc/translate.svg" id="translateIcon">
+            <div class="sideIcons">
+              <a href="../pages/coins.html"><div class="iconContainer" id="coinSc">
+                <img src="../misc/coins.svg">
+                <span class="iconText">COINS</span>
+              </div></a>
+              <a href="../pages/game.html"><div class="iconContainer" id="gameSc">
+                <img src="../misc/game.svg">
+                <span class="iconText">PLAY GAME</span>
+              </div></a>
+              <a href="../pages/globalWarming.html"><div class="iconContainer" id="climateSc">
+                <img src="../misc/thermometer.svg">
+                <span class="iconText">CLIMATE</span>
+              </div></a>
+              <a href="../pages/continents.html"><div class="iconContainer" id="continentsSc">
+                <img src="../misc/pin.svg">
+                <span class="iconText">CONTINENTS</span>
+              </div></a>
+            </div>
+            <div class="themeSelect">
+              <img src="../misc/moon.svg" id="selectDark">
+              <span class="separator"></span> 
+              <img src="../misc/sun.svg" id="selectLight">
+              <span class="separator"></span>
+              <img src="../misc/systemDefault.svg" id="selectDefault">
+            </div>
+        </div>
     </div>
-
+    <script type="module" src="../JS/hambMenu.js"></script>
 </body>
 </html>

@@ -5,22 +5,25 @@
     src: url(../fonts/GraphikMedium.otf);
     src: url(../fonts/GraphikRegular.otf);
 }
-
 ::selection{
     background: black;
     color: white;
 }
-
 body {
-    overflow-y: hidden;
     margin: 0;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body.no-scroll {
+    overflow: hidden;
 }
 *{
-    font-family: 'Abril Fatface', serif;
-    user-select: none;
+    font-family: 'Graphik', serif;
 }
-
-#heading, #fineprint {
+#heading, #fineprint, #continentHeading {
     font-family: 'Abril Fatface', serif;
     color: black;
     margin: 0;
@@ -28,8 +31,20 @@ body {
     font-weight: 350;
     line-height: 0.9;
 }
-
+#continentHeading {
+    font-family: 'Grapik', sans-serif;
+    color: #000;
+    font-family: Graphik;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-left: 7vw;
+    margin-top: 29vh;
+    padding-bottom: 29vh;
+    line-height: 1.1;
+    max-width: 62vw;
+    }
 #hamb {
+    top: 1vh;
     font-size: 3vw;
     margin-left: 1vw;
     margin-top: 1vh;
@@ -37,12 +52,12 @@ body {
     cursor: pointer;
     z-index: 3;
 }
-
 .menu {
     position: absolute;
-    background: #F1EFE9D1;
+    bottom: 0;
+    background: #E9EEF1D1;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
     margin: 0;
     opacity: 0;
@@ -54,6 +69,7 @@ body {
     z-index: 0;
     pointer-events: auto;
     transition: opacity 0.25s ease-out, z-index;
+    overflow: hidden;
 }
 
 .earthCaption {
@@ -61,13 +77,15 @@ body {
     margin-left: 50vw;
     margin-top: 24vh;
 }
-
 #fineprint {
     font-size: 3vw;
     font-family: 'Poppins', sans-serif;
     margin-left: 3.5vw;
 }
-
+.contentContainer {
+    z-index: 0;
+    height: 100vh;
+}
 canvas#bg {
     position: fixed;
     top: 0;
@@ -76,16 +94,15 @@ canvas#bg {
     height: 100%;
     z-index: 0;
 }
-
 .container {
+    z-index: 0;
     height: 100vh;
+    width: 100vw;
 }
-
 .coinLink, .plantLink {
     position: fixed;
     top: 50%;
 }
-
 #chevronLeft, #chevronRight {
     font-size: 2.5vw;
     margin: 0 1vw;
@@ -93,7 +110,6 @@ canvas#bg {
     top: 50%;
     transform: translateY(-50%);
 }
-
 .smalltext {
     font-family: 'Graphik Regular', sans-serif;
     font-size: 1vw;
@@ -109,7 +125,6 @@ canvas#bg {
     display: flex;
     align-items: center;
 }
-
 .themeSelect img {
     justify-content: center;
     width: 12vw;
@@ -121,7 +136,6 @@ canvas#bg {
 .themeSelect img:hover {
     background-color: rgba(110, 110, 110, 0.2);
 }
-
 .separator {
     width: 1px;
     height: 95vh;
@@ -129,12 +143,10 @@ canvas#bg {
     transform: rotate(18.4deg);
     margin-inline: 7vw;
 }
-
 .rotatedLeft {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
 }
-
 .rotatedRight {
     writing-mode: vertical-rl;
 }
@@ -165,7 +177,6 @@ canvas#bg {
     align-items: center;
     justify-content: flex-end;
 }
-
 .plantLink {
     right: 3vw;
     transform: translateY(-50%);
@@ -214,7 +225,6 @@ canvas#bg {
     overflow: hidden;
     white-space: nowrap;
 }
-
 .iconContainer:hover .iconText{
     opacity: 1;
 }
@@ -234,4 +244,71 @@ canvas#bg {
 }
 .socialIcons img:hover {
     background-color: rgba(138, 138, 138, 0.397);
+}
+#leftCoins, #rightCoins, #earnBt, #resetScoreButton {
+    z-index: 0;
+    position: fixed;
+}
+#leftCoins {
+    bottom: 0vh;
+    left: 0vw;
+    max-width: 34vw;
+}
+#rightCoins {
+    top: 1vh;
+    right: 2vw;
+    max-width: 26vw;
+}
+.currencyIndicator {
+    width: 50vw;
+    margin-left: 25vw;
+}
+#coins, #coinsDisplay {
+    margin-top: 25vh;
+    font-family: Graphik;
+    font-size: 3.7vw;
+    font-weight: 600;
+}
+#coinsDisplay {
+    color: #1761AA;
+}
+#earnBt{
+    position: fixed;
+    margin-top: 46vh;
+    margin-left: 37.5vw;
+    border-radius: 1.3vw;
+    border: 2px solid #1761AA;
+    background: rgba(0, 0, 0, 0.00);
+    color: #1761AA;
+    transition: background-color 0.25s ease-in-out;
+    width: 24vw;
+    height: 6vw;
+    font-family: Graphik;
+    font-size: 3vw;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+#shopBtn {
+    position: fixed;
+    margin-left: 42.5vw;
+    margin-top: 63.5vh;
+    transition: background-color 0.25s ease-in-out;
+    border-radius: 1vw;
+    border: 2px solid #1761AA;
+    width: 16vw;
+    height: 3.5vw;
+    color: #1761AA;
+    font-family: Graphik;
+    font-size: 2vw;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+    z-index: 0;
+}
+#earnBt:hover, #shopBtn:hover {
+    color: rgb(255, 255, 255);
+    border: 2px solid #1761AA;
+    background-color: #1761AA;
+    user-select: none;
 }
