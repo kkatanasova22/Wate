@@ -170,3 +170,44 @@ hr{
     }
 
 }
+
+@media screen and (min-width: 100px) and (max-width: 450px){
+    .textInside > h1{
+        font-size: 5vw;
+    }
+
+    .textInside > p{
+        font-size: 3vw;
+    }
+
+    .textInside{
+        margin-left: 8vw;
+    }
+
+    .image{
+        width: 30vw;
+    }
+
+    #improveContainer{
+        margin-top: 5vh;
+    }
+
+    #smallTexts > p{
+        margin-top: 3vh;
+        font-size: 4vw;
+    }
+
+    #choose{
+        margin-top: 0;
+    }
+
+    #improveHeading{
+        font-size: 10vw;
+    }
+
+    .improvement > button{
+        transform: scale(1.2);
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
