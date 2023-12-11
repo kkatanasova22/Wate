@@ -138,7 +138,7 @@ hr{
 
 @media screen and (min-width: 368px) and (max-width: 1391px){
     #solarImg{
-        background-size: 130%;
+        background-size: 130%; 
     }
 
     #gardenImg, #transportImg{
