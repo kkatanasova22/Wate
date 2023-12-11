@@ -144,3 +144,9 @@ a{
 .smallPrice > h1 {
     font-weight: 500;
 }
+
+.bigCard:first-child{
+    background: url(../images/snowyBg.png) no-repeat rgba(226, 226, 226, 0.90);
+    background-size: contain;
+    background-position: center 30%;
+}
