@@ -10,10 +10,12 @@ export function lightBackground(scene) {
         console.error('Scene is undefined.');
     }
 }
+
 export function darkBackground(scene) {
     const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
     if (scene) {
         scene.background = darkTexture;
+        body.classList.add('dark')
     } else {
         console.error('Scene is undefined.');
     }
