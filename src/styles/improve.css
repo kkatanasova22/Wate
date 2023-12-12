@@ -8,9 +8,44 @@
 }
 
 ::selection{
-    background: black;
-    color: white;
+    background: var(--selection-background) !important;
+    color: var(--selection-color) !important;
 }
+
+.container {
+    overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    user-select: none;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --selection-color: #fff;
+    --selection-background: #000;
+    --card-fill: #F1F1F1;
+    --button: #F1F1F1;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --selection-color: #000;
+    --selection-background: #fff;
+    --card-fill: #1F2329;
+    --button: #1F2329;
+}
+
 
 *{
     margin: 0;
@@ -19,7 +54,8 @@
 }
 
 body{
-    background: #F3FAFF;
+    background: var(--primary-color);
+    color: var(--primary-text-color);
 }
 
 #improveHeading{
@@ -50,6 +86,7 @@ body{
 hr{
     max-width: 72vw;
     margin-left: 15vw;
+    border-color: #676767;
 }
 
 #improveContainer {
@@ -93,7 +130,7 @@ hr{
 
 .improvement > button {
     border-radius: 1.25rem;
-    background: rgba(241, 241, 241, 0.70);
+    background: var(--button);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     border: none;
@@ -101,12 +138,13 @@ hr{
     width: 6.6vw;
     font-size: 1.5vw;
     font-weight: 600;
-    margin-left: auto; 
+    margin-left: auto;
+    color: var(--primary-text-color);
 }
 
 .improvement > button.bought {
     border-radius: 1.25rem;
-    background: rgba(241, 241, 241, 0.70);
+    background: var(--button);
   }
 
 .image {
@@ -116,7 +154,7 @@ hr{
     justify-content: flex-start;
     align-items: center;
     border-radius: 1.25rem;
-    background: rgba(241, 241, 241, 0.70);
+    background: var(--card-fill);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
