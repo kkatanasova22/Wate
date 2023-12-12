@@ -11,7 +11,7 @@
 <br>
 
 ## 💻 About
-<p align="center">Our main task is to create a company that sells all kind of new and reliable technology.</p>
+<p align="center">Our primary objective is to educate people about global issues and demonstrate effective solutions.</p>
 <p align="center"><b>What would you choose?</b></p>
 
 <p align="center">
