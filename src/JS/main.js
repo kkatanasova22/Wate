@@ -70,12 +70,27 @@ themeSelect.addEventListener('mouseover', () => {
 themeSelect.addEventListener('mouseout', () => {
   themeIndicator.style.opacity = '0';
 });
+
+function setThemeAndSaveToLocalStorage(theme) {
+  if (theme === 'dark') {
+    applyDarkMode();
+  } else if (theme === 'light') {
+    applyLightMode();
+  } else {
+    applySystemDefault();
+  }
+
+  localStorage.setItem('theme', theme);
+}
+
 document.getElementById("selectDark").onclick = function () {
-  applyDarkMode();
+  setThemeAndSaveToLocalStorage('dark');
 }
+
 document.getElementById("selectLight").onclick = function () {
-  applyLightMode();
+  setThemeAndSaveToLocalStorage('light');
 }
+
 document.getElementById("selectDefault").onclick = function () {
-  applySystemDefault();
+  setThemeAndSaveToLocalStorage('automatic');
 }

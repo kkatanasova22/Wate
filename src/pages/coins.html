@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Page Title</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
   <link rel="stylesheet" href="../styles/coins.css">
 </head>
+
 <body>
+
   <div class="container">
     <span class="material-symbols-outlined" id="hamb">menu</span>
     <img src="../images/leftCoins.png" id="leftCoins">
     <img src="../images/rightCoins.png" id="rightCoins">
+
     <a href="./game.html"><button id="earnBt">Earn more</button></a>
     <button id="shopBtn">Shop</button>
+
     <div class="currencyIndicator">
-        <h1 id="coins">Your current<br> balance is <span id="coinsDisplay">0W</span></h1>
+      
+      <h1 id="coins">Your current<br> balance is <span id="coinsDisplay">0W</span></h1>
+
     </div>
+
     <div class="menu">
       <div class="socialIcons">
         <img src="../misc/instagram.png" id="instagram">
@@ -25,29 +34,38 @@
         <img src="../misc/twitter.png" id="twitter">
         <img src="../misc/email.png" id="email">
       </div>
+
       <h1 id="themeIndicator"></h1>
       <img src="../misc/translate.svg" id="translateIcon">
       <div class="sideIcons">
-        <a href="../pages/coins.html"><div class="iconContainer" id="coinSc">
-          <img src="../misc/coins.svg">
-          <span class="iconText">COINS</span>
-        </div></a>
-        <a href="../pages/game.html"><div class="iconContainer" id="gameSc">
-          <img src="../misc/game.svg">
-          <span class="iconText">PLAY GAME</span>
-        </div></a>
-        <a href="../pages/globalWarming.html"><div class="iconContainer" id="climateSc">
-          <img src="../misc/thermometer.svg">
-          <span class="iconText">CLIMATE</span>
-        </div></a>
-        <a href="../pages/continents.html"><div class="iconContainer" id="continentsSc">
-          <img src="../misc/pin.svg">
-          <span class="iconText">CONTINENTS</span>
-        </div></a>
+        <a href="../pages/coins.html">
+          <div class="iconContainer" id="coinSc">
+            <img src="../misc/coins.svg">
+            <span class="iconText">COINS</span>
+          </div>
+        </a>
+        <a href="../pages/game.html">
+          <div class="iconContainer" id="gameSc">
+            <img src="../misc/game.svg">
+            <span class="iconText">PLAY GAME</span>
+          </div>
+        </a>
+        <a href="../pages/globalWarming.html">
+          <div class="iconContainer" id="climateSc">
+            <img src="../misc/thermometer.svg">
+            <span class="iconText">CLIMATE</span>
+          </div>
+        </a>
+        <a href="../pages/continents.html">
+          <div class="iconContainer" id="continentsSc">
+            <img src="../misc/pin.svg">
+            <span class="iconText">CONTINENTS</span>
+          </div>
+        </a>
       </div>
       <div class="themeSelect">
         <img src="../misc/moon.svg" id="selectDark">
-        <span class="separator"></span> 
+        <span class="separator"></span>
         <img src="../misc/sun.svg" id="selectLight">
         <span class="separator"></span>
         <img src="../misc/systemDefault.svg" id="selectDefault">
@@ -56,5 +74,13 @@
   </div>
   <script type="module" src="../JS/main.js"></script>
   <script type="module" src="../JS/coins.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const theme = localStorage.getItem('theme');
+      document.body.setAttribute('theme', theme);
+    });
+  </script>
 </body>
+
 </html>
