@@ -124,7 +124,7 @@ p, h1, li{
 }
 
 #separator{
-    border: 1px var(--primary-color) solid;
+    border: 1px var(--primary-text-color) solid;
     border-radius: 10px;
     max-width: 90vw;
 }
@@ -232,6 +232,11 @@ p, h1, li{
     background-color: #1761AA;
     border: 2px solid #1761AA;
 
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-text-color);
 }
 
 /*1/2 screen*/
