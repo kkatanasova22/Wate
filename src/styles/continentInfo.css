@@ -28,17 +28,19 @@
 :root {
     --primary-color: #F6F4EB;
     --primary-text-color: #000000;
-    --button-fill: #D0DCDB;
     --selection-color: #fff;
     --selection-background: #000;
+    --primary-scroll: #f1f1f1;
+    --secondary-scroll: #888; 
 }
 
 [theme="dark"] {
     --primary-color: #12151A;
     --primary-text-color: #FFFFFF;
-    --button-fill: #1F2227;
     --selection-color: #000;
     --selection-background: #fff;
+    --primary-scroll: #242424;
+    --secondary-scroll: #000;
 }
 
 *{
@@ -46,21 +48,25 @@
     font-family: Graphik;
 }
 
-html, body {
+body {
+    background: var(--primary-color);
     scroll-behavior: smooth;
-  }
+}
 
+p, h1, li{
+    color: var(--primary-text-color);
+}
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: var(--primary-scroll); 
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: var(--secondary-scroll); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -88,6 +94,7 @@ html, body {
 #bold{
     font-size: 6vw;
     font-weight: 800;
+    color: var(--primary-text-color);
 }
 
 #continentMap{
@@ -101,6 +108,19 @@ html, body {
 
     user-select: none;
     background: transparent;
+}
+
+#continentHeading {
+    font-family: 'Grapik', sans-serif;
+    color: var(--primary-text-color);
+    font-family: Graphik;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-left: 7vw;
+    margin-top: 29vh;
+    padding-bottom: 29vh;
+    line-height: 1.1;
+    max-width: 62vw;
 }
 
 #separator{

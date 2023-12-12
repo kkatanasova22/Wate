@@ -41,19 +41,6 @@ body.no-scroll {
     line-height: 0.9;
 }
 
-#continentHeading {
-    font-family: 'Grapik', sans-serif;
-    color: #000;
-    font-family: Graphik;
-    font-size: 4.5vw;
-    font-weight: 600;
-    margin-left: 7vw;
-    margin-top: 29vh;
-    padding-bottom: 29vh;
-    line-height: 1.1;
-    max-width: 62vw;
-}
-
 #hamb {
     top: 1vh;
     font-size: 3vw;

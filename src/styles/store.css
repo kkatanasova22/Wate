@@ -1,7 +1,43 @@
-::selection{
-    background: black;
-    color: white;
+::selection {
+    background: var(--selection-background);
+    color: var(--selection-color);
 }
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --card-fill : #606060;
+    --big-card-fill: #E2E2E2;
+    --card-border: #D2D2D2;
+    --selection-color: #fff;
+    --selection-background: #000;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --card-fill: #4242429a;
+    --big-card-fill: #1F2329;
+    --card-border: #272A2E;
+    --selection-color: #000;
+    --selection-background: #fff;
+}
+
+body{
+    background: var(--primary-color);
+}
+
 #containerShop {
     margin: 0 auto;
     padding: 0;
@@ -45,6 +81,7 @@ a{
 }
 
 #containerShop {
+    margin-top: 5vh;
     top: 0;
     width: 90vw;
     height: 70vh;
@@ -60,8 +97,8 @@ a{
     height: 44rem;
     width: 38rem;
     border-radius: 1.25rem;
-    border: 3px solid #D2D2D2;
-    background: rgba(226, 226, 226, 0.90);
+    border: 3px solid var(--card-border);
+    background: var(--big-card-fill);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -80,13 +117,13 @@ a{
 }
 
 .smallCard:first-child{
-    background: url(../images/tree.png) center center no-repeat rgba(226, 226, 226, 0.90);
+    background: url(../images/tree.png) center center no-repeat var(--big-card-fill);
     z-index: 1;
 }
 
 .smallCard:last-child{
     margin-top: 1.5rem;
-    background: url(../images/cherryTree.png) center center no-repeat rgba(226, 226, 226, 0.90);
+    background: url(../images/cherryTree.png) center center no-repeat var(--big-card-fill);
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -103,8 +140,8 @@ a{
     width: 100%;
     height: 22vh;
     text-align: center;
-    border: 1px solid rgba(96, 96, 96, 0.01);
-    background: rgba(166, 166, 166, 0.13);
+    border: 1px solid var(--card-border);
+    background: var(--card-fill);
 }
 
 .bigName > h1,
@@ -136,14 +173,14 @@ a{
     font-weight: 500;
 }
 .bigCard:first-child{
-    background: url(../images/snowyBg.png) no-repeat rgba(226, 226, 226, 0.90);
+    background: url(../images/snowyBg.png) no-repeat var(--big-card-fill);
     background-size: contain;
     background-position: center 30%;
 }
 
 .bigCard:nth-child(2)
 {
-    background: url(../images/dirtySoil.png) no-repeat rgba(226, 226, 226, 0.90);
+    background: url(../images/dirtySoil.png) no-repeat var(--big-card-fill);
     background-size: 120%;
     background-position: center 30%;
 }

@@ -43,5 +43,10 @@ const soilBuyHandler = function(e) {
     };
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    document.body.setAttribute('theme', theme);
+  });
+
 document.getElementById('snowySoil').addEventListener("click", soilBuyHandler);
 document.getElementById('dirtySoil').addEventListener("click", soilBuyHandler);
