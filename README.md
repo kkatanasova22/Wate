@@ -12,7 +12,7 @@
 
 ## 💻 About
 <p align="center">Our primary objective is to educate people about global issues and demonstrate effective solutions.</p>
-<p align="center"><b>What would you choose?</b></p>
+<p align="center"><b>What would you do?</b></p>
 
 <p align="center">
     <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
