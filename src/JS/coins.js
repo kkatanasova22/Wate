@@ -12,3 +12,8 @@ let shopBtn = document.getElementById("shopBtn");
 shopBtn.addEventListener("click", function() {
     window.location.href = "store.html";
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    document.body.setAttribute('theme', theme);
+  });

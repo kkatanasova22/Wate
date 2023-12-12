@@ -10,9 +10,9 @@
     font-family: Graphik;
 }
 
-::selection {
-    background: var(--selection-background);
-    color: var(--selection-color);
+::selection{
+    background: var(--selection-background) !important;
+    color: var(--selection-color) !important;
 }
 
 .container {

@@ -1,4 +1,4 @@
-import '../styles/styles.css';
+import '../styles/navbar.css';
 export function updateHamburgerColor(isDarkMode, isMenuOpen) {
     const hamb = document.querySelector('#hamb');
     const iconText = isMenuOpen ? "close" : "menu";
