@@ -85,7 +85,7 @@ a{
     cursor: pointer;
 }
 
-#container {
+#gameContainer {
     float:right;
     width: 58rem;
     height: 50rem;
@@ -130,7 +130,7 @@ a{
 }
 
   @media screen and (min-width: 768px) and (max-width: 991px) {
-    #container{
+    #gameContainer{
         margin-top: -3rem;
         width: 30rem;
         height: 25rem;
@@ -204,4 +204,3 @@ a{
   @media screen and (min-width: 992px) {
     /*large screens */
   }
-  

@@ -5,19 +5,52 @@
     src: url(../fonts/GraphikRegular.otf);
 }
 
-::selection{
-    background: black;
-    color: white;
-}
-
 *{
     padding: 0;
     font-family: Graphik;
 }
 
-body{
-    background: #F3FAFF;
+::selection {
+    background: var(--selection-background);
+    color: var(--selection-color);
+}
+
+.container {
     overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --button-fill: #D0DCDB;
+    --selection-color: #fff;
+    --selection-background: #000;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --button-fill: #1F2227;
+    --selection-color: #000;
+    --selection-background: #fff;
+}
+
+
+body{
+    background: var(--primary-color);
+    overflow: hidden;
+    color: var(--primary-text-color)
 }
 
 .bringBack {
@@ -27,7 +60,7 @@ body{
     margin: auto;
     width: 5vw;
     height: 10vh;
-    color: #fff;
+    color: var(--primary-text-color);
     cursor: pointer;
     z-index: 2;
     transition-property: color, opacity;
@@ -43,7 +76,7 @@ body{
     width: 0.3vw;
     height: 0.7vh;
     border-radius: 50%;
-    background: #000000;
+    background: var(--primary-text-color);
     opacity: 0;
     transform: scale(0.5);
     transition-property: opacity, transform;
@@ -58,7 +91,7 @@ body{
     margin: auto;
     width: 1.4vw;
     height: 2.5vh;
-    border: 2px solid #000000;
+    border: 2px solid var(--primary-text-color);
     border-radius: 50%;
     transition-property: opacity, transform;
     transition-duration: 0.3s;
@@ -73,7 +106,7 @@ body{
     bottom: 2vw;
     margin: auto;
     width: 1px;
-    background: #000000;
+    background: var(--primary-text-color);
     transition-duration: 0.3s;
     z-index: 1;
 }
@@ -87,7 +120,7 @@ body{
     width: 0.5vw;
     height: 1vh;
     border-radius: 50%;
-    background: #000000;
+    background: var(--primary-text-color);
     transition: transform 0.3s;
     z-index: 0;
 }
@@ -188,13 +221,13 @@ body{
 .lineContinent {
     width: 2vw;
     height: 1.7px;
-    background: #000000;
+    background: var(--primary-text-color);
     margin-right: 1vw;
     margin-left: 0.5vw;
 }
 
 .pointContinent {
-    background: #000000;
+    background: var(--primary-text-color);
     border-radius: 50%;
     width: 0.3vw;
     height: 0.6vh;
@@ -203,7 +236,7 @@ body{
 
 a, a:active, a::before { 
     text-decoration: none;
-    color: #000000;
+    color: var(--primary-text-color) !important;
 }
 
 #northAmerica{

@@ -5,9 +5,40 @@
     src: url(../fonts/GraphikRegular.otf);
 }
 
-::selection{
-    background: black;
-    color: white;
+::selection {
+    background: var(--selection-background);
+    color: var(--selection-color);
+}
+
+.container {
+    overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --button-fill: #D0DCDB;
+    --selection-color: #fff;
+    --selection-background: #000;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --button-fill: #1F2227;
+    --selection-color: #000;
+    --selection-background: #fff;
 }
 
 *{
@@ -42,7 +73,7 @@ html, body {
 }
 
 #heading{
-    color: #000;
+    color: var(--primary-text-color);
 
     font-family: Graphik;
     font-size: 4.5vw;
@@ -73,7 +104,7 @@ html, body {
 }
 
 #separator{
-    border: 1px black solid;
+    border: 1px var(--primary-color) solid;
     border-radius: 10px;
     max-width: 90vw;
 }

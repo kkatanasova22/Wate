@@ -18,6 +18,7 @@ function setGame() {
     if (checkTree == "Default") {
         treeSource = "../images/tree.png";
     }
+
     if (checkTree == "Cherry") {
         treeSource = "../images/cherryTree.png";
     }
@@ -29,6 +30,18 @@ function setGame() {
     treeConst.id = 'someId'
     treeConst.draggable = true;
     treeConst.addEventListener("dragstart", dragStart);
+
+    const gameContainer = document.getElementById("gameContainer");
+    let checkSoil = localStorage.getItem("soilType");
+    if (checkSoil == "Soil") {
+        console.log('set to soil');
+        gameContainer.style.backgroundImage = "url('../images/dirtySoil.png')";
+    }
+
+    if (checkSoil == "Snowy") {
+        console.log('set to snowy');
+        gameContainer.style.backgroundImage = "url('../images/snowyBg.png')";
+    }
 
     const container = document.getElementById("soilContainer");
     container.addEventListener("dragover", dragOver);
