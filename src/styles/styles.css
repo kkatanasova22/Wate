@@ -1,29 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand&display=swap&family=Poppins:wght@100&display=swap');
+
 @font-face {
     font-family: Graphik;
     src: url(../fonts/GraphikBlack.otf);
     src: url(../fonts/GraphikMedium.otf);
     src: url(../fonts/GraphikRegular.otf);
 }
-::selection{
+
+::selection {
     background: black;
     color: white;
 }
+
 body {
     margin: 0;
     overflow-x: hidden;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 body.no-scroll {
     overflow: hidden;
 }
-*{
+
+* {
     font-family: 'Graphik', serif;
 }
-#heading, #fineprint, #continentHeading {
+
+#heading,
+#fineprint,
+#continentHeading {
     font-family: 'Abril Fatface', serif;
     color: black;
     margin: 0;
@@ -31,6 +40,7 @@ body.no-scroll {
     font-weight: 350;
     line-height: 0.9;
 }
+
 #continentHeading {
     font-family: 'Grapik', sans-serif;
     color: #000;
@@ -42,7 +52,8 @@ body.no-scroll {
     padding-bottom: 29vh;
     line-height: 1.1;
     max-width: 62vw;
-    }
+}
+
 #hamb {
     top: 1vh;
     font-size: 3vw;
@@ -52,6 +63,7 @@ body.no-scroll {
     cursor: pointer;
     z-index: 3;
 }
+
 .menu {
     position: absolute;
     bottom: 0;
@@ -64,6 +76,7 @@ body.no-scroll {
     pointer-events: none;
     transition: opacity 0.25s ease-in-out, z-index 0s ease-in-out;
 }
+
 .menu.open {
     opacity: 1;
     z-index: 0;
@@ -77,15 +90,18 @@ body.no-scroll {
     margin-left: 50vw;
     margin-top: 24vh;
 }
+
 #fineprint {
     font-size: 3vw;
     font-family: 'Poppins', sans-serif;
     margin-left: 3.5vw;
 }
+
 .contentContainer {
     z-index: 0;
     height: 100vh;
 }
+
 canvas#bg {
     position: fixed;
     top: 0;
@@ -94,22 +110,28 @@ canvas#bg {
     height: 100%;
     z-index: 0;
 }
+
 .container {
     z-index: 0;
     height: 100vh;
     width: 100vw;
 }
-.coinLink, .plantLink {
+
+.coinLink,
+.plantLink {
     position: fixed;
     top: 50%;
 }
-#chevronLeft, #chevronRight {
+
+#chevronLeft,
+#chevronRight {
     font-size: 2.5vw;
     margin: 0 1vw;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .smalltext {
     font-family: 'Graphik Regular', sans-serif;
     font-size: 1vw;
@@ -117,6 +139,7 @@ canvas#bg {
     color: black;
     margin: 0;
 }
+
 .themeSelect {
     position: absolute;
     bottom: 20px;
@@ -125,6 +148,7 @@ canvas#bg {
     display: flex;
     align-items: center;
 }
+
 .themeSelect img {
     justify-content: center;
     width: 12vw;
@@ -133,9 +157,11 @@ canvas#bg {
     border-radius: 15px;
     transition: background-color 0.185s ease-in-out;
 }
+
 .themeSelect img:hover {
     background-color: rgba(110, 110, 110, 0.2);
 }
+
 .separator {
     width: 1px;
     height: 95vh;
@@ -143,14 +169,18 @@ canvas#bg {
     transform: rotate(18.4deg);
     margin-inline: 7vw;
 }
+
 .rotatedLeft {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
 }
+
 .rotatedRight {
     writing-mode: vertical-rl;
 }
-#themeIndicator, #translateIcon {
+
+#themeIndicator,
+#translateIcon {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -158,9 +188,11 @@ canvas#bg {
     opacity: 0;
     font-family: 'Quicksand', sans-serif;
 }
+
 #themeIndicator {
     font-size: 1.8vw;
 }
+
 #translateIcon {
     width: 4vw;
     position: fixed;
@@ -169,6 +201,7 @@ canvas#bg {
     cursor: pointer;
     z-index: 1;
 }
+
 .coinLink {
     left: 3vw;
     transform: translateY(-50%);
@@ -177,6 +210,7 @@ canvas#bg {
     align-items: center;
     justify-content: flex-end;
 }
+
 .plantLink {
     right: 3vw;
     transform: translateY(-50%);
@@ -184,6 +218,7 @@ canvas#bg {
     display: flex;
     align-items: center;
 }
+
 .sideIcons {
     top: 8vh;
     position: fixed;
@@ -191,6 +226,7 @@ canvas#bg {
     display: flex;
     flex-direction: column;
 }
+
 .iconContainer {
     position: relative;
     display: flex;
@@ -204,17 +240,21 @@ canvas#bg {
     width: auto;
     width: fit-content;
 }
+
 .iconContainer:hover {
     width: fit-content;
 }
+
 .sideIcons img {
     width: 3vw;
     margin-right: 0.5vw;
     -webkit-user-drag: none;
 }
+
 .iconContainer:hover {
     background-color: rgba(41, 41, 41, 0.071);
 }
+
 .iconText {
     font-size: 2vw;
     font-family: 'Poppins', sans-serif;
@@ -225,14 +265,17 @@ canvas#bg {
     overflow: hidden;
     white-space: nowrap;
 }
-.iconContainer:hover .iconText{
+
+.iconContainer:hover .iconText {
     opacity: 1;
 }
+
 .socialIcons {
     position: fixed;
     top: 4vh;
     right: 2vw;
 }
+
 .socialIcons img {
     padding: 0.4vw;
     -webkit-user-drag: none;
@@ -242,37 +285,49 @@ canvas#bg {
     max-width: 2.5vw;
     transition: background-color 0.25s ease-in-out;
 }
+
 .socialIcons img:hover {
     background-color: rgba(138, 138, 138, 0.397);
 }
-#leftCoins, #rightCoins, #earnBt, #resetScoreButton {
+
+#leftCoins,
+#rightCoins,
+#earnBt,
+#resetScoreButton {
     z-index: 0;
     position: fixed;
 }
+
 #leftCoins {
     bottom: 0vh;
     left: 0vw;
     max-width: 34vw;
 }
+
 #rightCoins {
     top: 1vh;
     right: 2vw;
     max-width: 26vw;
 }
+
 .currencyIndicator {
     width: 50vw;
     margin-left: 25vw;
 }
-#coins, #coinsDisplay {
+
+#coins,
+#coinsDisplay {
     margin-top: 25vh;
     font-family: Graphik;
     font-size: 3.7vw;
     font-weight: 600;
 }
+
 #coinsDisplay {
     color: #1761AA;
 }
-#earnBt{
+
+#earnBt {
     position: fixed;
     margin-top: 46vh;
     margin-left: 37.5vw;
@@ -289,6 +344,7 @@ canvas#bg {
     cursor: pointer;
     user-select: none;
 }
+
 #shopBtn {
     position: fixed;
     margin-left: 42.5vw;
@@ -306,7 +362,9 @@ canvas#bg {
     user-select: none;
     z-index: 0;
 }
-#earnBt:hover, #shopBtn:hover {
+
+#earnBt:hover,
+#shopBtn:hover {
     color: rgb(255, 255, 255);
     border: 2px solid #1761AA;
     background-color: #1761AA;

@@ -104,6 +104,11 @@ hr{
     margin-left: auto; 
 }
 
+.improvement > button.bought {
+    border-radius: 1.25rem;
+    background: rgba(241, 241, 241, 0.70);
+  }
+
 .image {
     height: 20vh;
     width: 10vw;
