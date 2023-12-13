@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../styles/store.css">
     <link rel="icon" type="image/x-icon" href="../images/wateLogo.png">
     <title>Wate</title>
@@ -13,28 +15,30 @@
         <span class="material-symbols-outlined">chevron_left</span>
         <a id="smalltext" href="./coins.html">COINS</a>
     </div>
+
     <div class="container">
         <span class="material-symbols-outlined" id="hamb">menu</span>
         <h1 id="shopHeading">Shop</h1>
+
         <div id="containerShop">
-            <!-- <div id="soilBackground"> -->
-                <div id='snowySoil' class="bigCard" data-soil="Snowy">
-                    <div class="bigName">
-                        <h1>Snowy</h1>
-                        <div class="bigPrice">
-                            <h1><span class="price">250</span>W</h1>
-                        </div>
+            <div id='snowySoil' class="bigCard" data-soil="Snowy">
+                <div class="bigName">
+                    <h1>Snowy</h1>
+                    <div class="bigPrice">
+                        <h1><span class="price">250</span>W</h1>
                     </div>
                 </div>
-                <div id='dirtySoil' class="bigCard" data-soil="Soil">
-                    <div class="bigName">
-                        <h1>Soil</h1>
-                        <div class="bigPrice">
-                            <h1><span class="price">250</span>W</h1>
-                        </div>
+            </div>
+
+            <div id='dirtySoil' class="bigCard" data-soil="Soil">
+                <div class="bigName">
+                    <h1>Soil</h1>
+                    <div class="bigPrice">
+                        <h1><span class="price">250</span>W</h1>
                     </div>
                 </div>
-            <!-- </div> -->
+            </div>
+
             <div id="smallCards">
                 <div class="smallCard" data-tree="Default">
                     <div class="smallName">
@@ -44,6 +48,7 @@
                         <h1>Default</h1>
                     </div>
                 </div>
+
                 <div class="smallCard" data-tree="Cherry">
                     <div class="smallName">
                         <h1>Cherry Tree</h1>
@@ -53,6 +58,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="bigCard" data-tree="Christmas">
                 <div class="bigName">
                     <h1>Christmas theme</h1>
@@ -62,43 +68,59 @@
                 </div>
             </div>
         </div>
+
         <div class="menu">
             <div class="socialIcons">
-              <img src="../misc/instagram.png" id="instagram">
-              <img src="../misc/facebook.png" id="facebook">
-              <img src="../misc/twitter.png" id="twitter">
-              <img src="../misc/email.png" id="email">
+                <img src="../misc/instagram.png" id="instagram">
+                <img src="../misc/facebook.png" id="facebook">
+                <img src="../misc/twitter.png" id="twitter">
+                <img src="../misc/email.png" id="email">
             </div>
+
             <h1 id="themeIndicator"></h1>
             <img src="../misc/translate.svg" id="translateIcon">
             <div class="sideIcons">
-              <a href="../pages/coins.html"><div class="iconContainer" id="coinSc">
-                <img src="../misc/coins.svg">
-                <span class="iconText">COINS</span>
-              </div></a>
-              <a href="../pages/game.html"><div class="iconContainer" id="gameSc">
-                <img src="../misc/game.svg">
-                <span class="iconText">PLAY GAME</span>
-              </div></a>
-              <a href="../pages/globalWarming.html"><div class="iconContainer" id="climateSc">
-                <img src="../misc/thermometer.svg">
-                <span class="iconText">CLIMATE</span>
-              </div></a>
-              <a href="../pages/continents.html"><div class="iconContainer" id="continentsSc">
-                <img src="../misc/pin.svg">
-                <span class="iconText">CONTINENTS</span>
-              </div></a>
+                <a href="../pages/coins.html">
+                    <div class="iconContainer" id="coinSc">
+                        <img src="../misc/coins.svg">
+                        <span class="iconText">COINS</span>
+                    </div>
+                </a>
+
+                <a href="../pages/game.html">
+                    <div class="iconContainer" id="gameSc">
+                        <img src="../misc/game.svg">
+                        <span class="iconText">PLAY GAME</span>
+                    </div>
+                </a>
+
+                <a href="../pages/globalWarming.html">
+                    <div class="iconContainer" id="climateSc">
+                        <img src="../misc/thermometer.svg">
+                        <span class="iconText">CLIMATE</span>
+                    </div>
+                </a>
+
+                <a href="../pages/continents.html">
+                    <div class="iconContainer" id="continentsSc">
+                        <img src="../misc/pin.svg">
+                        <span class="iconText">CONTINENTS</span>
+                    </div>
+                </a>
             </div>
+
             <div class="themeSelect">
-              <img src="../misc/moon.svg" id="selectDark">
-              <span class="separator"></span> 
-              <img src="../misc/sun.svg" id="selectLight">
-              <span class="separator"></span>
-              <img src="../misc/systemDefault.svg" id="selectDefault">
+                <img src="../misc/moon.svg" id="selectDark">
+                <span class="separator"></span>
+                <img src="../misc/sun.svg" id="selectLight">
+                <span class="separator"></span>
+                <img src="../misc/systemDefault.svg" id="selectDefault">
             </div>
-          </div>
+        </div>
     </div>
+
     <script type="module" src="../JS/store.js"></script>
-    <script type="module" src="../JS/hambMenu.js"></script>        
+    <script type="module" src="../JS/hambMenu.js"></script>
 </body>
+
 </html>

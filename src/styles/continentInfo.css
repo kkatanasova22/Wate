@@ -5,7 +5,7 @@
     src: url(../fonts/GraphikRegular.otf);
 }
 
-::selection{
+::selection {
     background: var(--selection-background) !important;
     color: var(--selection-color) !important;
 }
@@ -31,7 +31,7 @@
     --selection-color: #fff;
     --selection-background: #000;
     --primary-scroll: #f1f1f1;
-    --secondary-scroll: #888; 
+    --secondary-scroll: #888;
 }
 
 [theme="dark"] {
@@ -43,7 +43,7 @@
     --secondary-scroll: #000;
 }
 
-*{
+* {
     padding: 0;
     font-family: Graphik;
 }
@@ -53,32 +53,34 @@ body {
     scroll-behavior: smooth;
 }
 
-p, h1, li{
+p,
+h1,
+li {
     color: var(--primary-text-color);
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--primary-scroll); 
+    background: var(--primary-scroll);
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-scroll); 
+    background: var(--secondary-scroll);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+    background: #555;
 }
 
-#containerBasis{
+#containerBasis {
     max-width: fit-content;
     height: 70vh;
 }
 
-#heading{
+#heading {
     color: var(--primary-text-color);
 
     font-family: Graphik;
@@ -91,13 +93,13 @@ p, h1, li{
     max-width: 62vw;
 }
 
-#bold{
+#bold {
     font-size: 6vw;
     font-weight: 800;
     color: var(--primary-text-color);
 }
 
-#continentMap{
+#continentMap {
     position: absolute;
     top: 0;
     right: 0;
@@ -123,29 +125,30 @@ p, h1, li{
     max-width: 62vw;
 }
 
-#separator{
+#separator {
     border: 1px var(--primary-text-color) solid;
     border-radius: 10px;
     max-width: 90vw;
 }
 
-#change, #individual{
+#change,
+#individual {
     height: 50vh;
 }
 
 .basisInfoBullet {
-    list-style-type: none; 
-    padding: 0; 
+    list-style-type: none;
+    padding: 0;
 }
 
 .basisInfoBullet li {
-    padding-left: 4vw; 
+    padding-left: 4vw;
     background: url('../images/leafIcon.png') no-repeat left top;
-    background-size: 2vw 4vh; 
+    background-size: 2vw 4vh;
     margin-bottom: 10px;
 }
 
-#changeUL{
+#changeUL {
     margin-left: 9vw;
 }
 
@@ -154,13 +157,14 @@ p, h1, li{
     font-size: 1.5vw;
 }
 
-#changes, #individuals {
+#changes,
+#individuals {
     font-size: 4vw;
     margin-left: 9vw;
     margin-top: 15vh;
 }
 
-.changesImage{
+.changesImage {
     position: relative;
     width: 57vw;
     height: 68.6vh;
@@ -173,11 +177,12 @@ p, h1, li{
     user-select: none;
 }
 
-#impact{
+#impact {
     height: 35vh;
 }
 
-#impacts, #communities{
+#impacts,
+#communities {
     text-align: right;
     font-size: 4vw;
     margin-right: 42vw;
@@ -185,13 +190,13 @@ p, h1, li{
 
 #impacts {
     font-size: 4vw;
-    margin-right: 42vw; 
+    margin-right: 42vw;
     margin-top: 8vh;
-    text-align: right; 
+    text-align: right;
 }
 
-#impactUL{
-    float:right;
+#impactUL {
+    float: right;
     font-size: 1.5vw;
     margin-right: 26vw;
     max-width: 31vw;
@@ -199,18 +204,18 @@ p, h1, li{
     background: transparent;
 }
 
-#how{
+#how {
     margin-top: 10vh;
     text-align: center;
     font-size: 5vw;
 }
 
-#communities{
+#communities {
     margin-right: 25vw;
     margin-bottom: 1vh;
 }
 
-#impBtn{
+#impBtn {
     color: #1761AA;
     font-size: 3vw;
     border-radius: 1.625rem;
@@ -227,50 +232,51 @@ p, h1, li{
     transition: 0.25s ease-in-out;
 }
 
-#impBtn:hover{
+#impBtn:hover {
     color: white;
     background-color: #1761AA;
     border: 2px solid #1761AA;
 
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--primary-text-color);
 }
 
 /*1/2 screen*/
 
-@media screen and (min-width: 368px) and (max-width: 1591px){    
-    #continentMap{
+@media screen and (min-width: 368px) and (max-width: 1591px) {
+    #continentMap {
         width: 66vw;
         height: 60vh;
     }
 
-    #containerBasis{
+    #containerBasis {
         height: 40vh;
     }
 
     .basisInfoBullet li {
-        background-size: 1.8vw 2vh; 
+        background-size: 1.8vw 2vh;
     }
 
-    .changesImage{
+    .changesImage {
         width: 47vw;
         height: 35vh;
         margin-top: -30vh;
     }
 
-    #change, #individual{
+    #change,
+    #individual {
         height: 30vh;
     }
 
-    #impact{
+    #impact {
         margin-top: -5vh;
         height: 25vh;
     }
 
-    #impBtn{
+    #impBtn {
         font-size: 2.5vw;
         width: 20vw;
         height: 7vh;
@@ -278,37 +284,38 @@ a{
         margin-bottom: 10vh;
     }
 
-    #impactUL, #infoChanges{
+    #impactUL,
+    #infoChanges {
         font-size: 1.8vw;
     }
 }
 
 /*Fix separator under impact*/
 
-@media screen and (min-width: 900px) and (max-width: 1980px){
-    #impact{
+@media screen and (min-width: 900px) and (max-width: 1980px) {
+    #impact {
         height: 40vh;
     }
 }
 
 /* Small devices (phones)  */
 @media screen and (max-width: 767px) {
-    #continentMap{
+    #continentMap {
         position: absolute;
         top: 10vh;
         width: 66vw;
         height: 30vh;
     }
 
-    #containerBasis{
+    #containerBasis {
         height: 30vh;
     }
 
-    #heading{
+    #heading {
         font-size: 10vw;
     }
 
-    #bold{
+    #bold {
         font-size: 12vw;
     }
 
@@ -316,7 +323,7 @@ a{
         background: transparent;
     }
 
-    .changesImage:first-child{
+    .changesImage:first-child {
         width: 47vw;
         height: 15vh;
         position: absolute;
@@ -324,41 +331,44 @@ a{
         float: left;
     }
 
-    #changes, #individuals {
+    #changes,
+    #individuals {
         font-size: 8vw;
         margin-left: 9vw;
         margin-top: 15vh;
     }
 
-    #impactUL, #infoChanges{
+    #impactUL,
+    #infoChanges {
         font-size: 3vw;
         max-width: 50vw;
         margin-right: 5vw;
     }
 
-    #impacts, #communities{
+    #impacts,
+    #communities {
         margin-top: -10vh;
         text-align: right;
         font-size: 8vw;
         margin-right: 27vw;
     }
 
-    #how{
+    #how {
         font-size: 10vw;
         margin-bottom: -3vh;
     }
 
-    #impBtn{
+    #impBtn {
         height: 12vh;
         width: 28vw;
         margin-top: 0vh;
         font-size: 5vw;
     }
 
-    .changesImage:last-child{
+    .changesImage:last-child {
         bottom: -15vh;
         width: 47vw;
         height: 18vh;
-    } 
+    }
 
-} 
+}

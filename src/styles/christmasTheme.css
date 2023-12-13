@@ -4,12 +4,12 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-::selection{
+::selection {
     background: var(--selection-background) !important;
     color: var(--selection-color) !important;
 }
 
-body{
+body {
     background: var(--primary-color);
 }
 
@@ -61,15 +61,16 @@ body{
     font-size: 1.5rem;
 }
 
-#smalltext, .material-symbols-outlined{
+#smalltext,
+.material-symbols-outlined {
     color: var(--primary-text-color) !important;
 }
 
-#smalltext{
+#smalltext {
     transform: rotate(-90deg);
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     user-select: none;
@@ -81,28 +82,28 @@ a{
     user-select: none;
 }
 
-#textContainer{
+#textContainer {
     margin-top: 7vh;
     margin-left: 5rem;
     max-width: fit-content;
     float: left;
 }
 
-#textContainer>h1{
+#textContainer>h1 {
     color: #990606;
     font-size: 6rem;
 }
 
-#textContainer>p{
+#textContainer>p {
     color: #578116;
     font-size: 2rem;
 }
 
-#trees{
+#trees {
     margin-left: 0rem;
     max-width: 25rem;
     float: left;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -110,7 +111,7 @@ a{
     height: 33rem;
 }
 
-.treeConst{ 
+.treeConst {
     margin-top: 20vh;
     height: fit-content;
     background-color: transparent;
@@ -118,7 +119,7 @@ a{
 }
 
 #gameContainer {
-    float:right;
+    float: right;
     width: 58rem;
     height: 50rem;
     flex-shrink: 0;
@@ -127,7 +128,7 @@ a{
     background-size: cover;
 
     margin: 0 auto;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     margin-right: 18rem;
     margin-top: -10vh;
@@ -158,18 +159,17 @@ a{
     background-color: transparent;
 }
 
-.soils:nth-child(3){
+.soils:nth-child(3) {
     margin-top: -18vh;
     margin-right: 8vw;
 }
 
-.soils:nth-child(2)
-{
+.soils:nth-child(2) {
     margin-top: 1rem;
 }
 
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    #gameContainer{
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #gameContainer {
         margin-top: -3rem;
         width: 30rem;
         height: 25rem;
@@ -182,28 +182,28 @@ a{
         padding-top: 5rem;
         margin-top: 5rem;
         margin-left: 4rem;
-    
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         background-size: contain;
     }
 
-    #trees{
+    #trees {
         position: fixed;
         margin-top: 5rem;
         margin-bottom: 5rem;
         max-width: 20rem;
         float: left;
-        
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 50rem;
         height: 33rem;
     }
-  }
-  
-  @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 992px) {
     /*large screens */
-  }
+}

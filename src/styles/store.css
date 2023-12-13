@@ -17,7 +17,7 @@
 :root {
     --primary-color: #F6F4EB;
     --primary-text-color: #000000;
-    --card-fill : #60606094;
+    --card-fill: #60606094;
     --big-card-fill: #E2E2E2;
     --card-border: #D2D2D2;
     --selection-color: #fff;
@@ -34,7 +34,7 @@
     --selection-background: #fff;
 }
 
-body{
+body {
     background: var(--primary-color);
 }
 
@@ -44,7 +44,8 @@ body{
     font-family: 'Graphik', sans-serif;
 }
 
-h1, p{
+h1,
+p {
     background: transparent;
 }
 
@@ -59,18 +60,18 @@ h1, p{
     background: transparent;
 }
 
-#smalltext{
+#smalltext {
     transform: rotate(-90deg);
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     user-select: none;
     background: transparent;
 }
 
-#shopHeading{
+#shopHeading {
     color: #1F5A9E;
     font-family: 'Graphik', serif;
     font-size: 6rem;
@@ -106,22 +107,22 @@ a{
     align-items: center;
 }
 
-.bigCard:last-child{
+.bigCard:last-child {
     width: 30rem;
 }
 
-.smallCard{
+.smallCard {
     height: 21rem;
     width: 22rem;
     background: #C4C4C4;
 }
 
-.smallCard:first-child{
+.smallCard:first-child {
     background: url(../images/tree.png) center center no-repeat var(--big-card-fill);
     z-index: 1;
 }
 
-.smallCard:last-child{
+.smallCard:last-child {
     margin-top: 1.5rem;
     background: url(../images/cherryTree.png) center center no-repeat var(--big-card-fill);
     background-repeat: no-repeat;
@@ -144,8 +145,8 @@ a{
     background: var(--card-fill);
 }
 
-.bigName > h1,
-.smallName > h1 {
+.bigName>h1,
+.smallName>h1 {
     margin-top: 3vh;
 }
 
@@ -168,25 +169,24 @@ a{
     color: #fff;
 }
 
-.bigPrice > h1,
-.smallPrice > h1 {
+.bigPrice>h1,
+.smallPrice>h1 {
     font-weight: 500;
 }
 
-.bigCard:first-child{
+.bigCard:first-child {
     background: url(../images/snowyBg.png) no-repeat var(--big-card-fill);
     background-size: contain;
     background-position: center 30%;
 }
 
-.bigCard:nth-child(2)
-{
+.bigCard:nth-child(2) {
     background: url(../images/dirtySoil.png) no-repeat var(--big-card-fill);
     background-size: 120%;
     background-position: center 30%;
 }
 
-.bigCard:last-child{
+.bigCard:last-child {
     background: url(../images/christmasTree.png) no-repeat var(--big-card-fill);
     background-size: 140%;
     background-position: center 40%;

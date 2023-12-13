@@ -333,3 +333,8 @@ body{
 .socialIcons img:hover {
     background-color: rgba(138, 138, 138, 0.397);
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}

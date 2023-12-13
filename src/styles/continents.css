@@ -5,12 +5,12 @@
     src: url(../fonts/GraphikRegular.otf);
 }
 
-*{
+* {
     padding: 0;
     font-family: Graphik;
 }
 
-::selection{
+::selection {
     background: var(--selection-background) !important;
     color: var(--selection-color) !important;
 }
@@ -47,7 +47,7 @@
 }
 
 
-body{
+body {
     background: var(--primary-color);
     overflow: hidden;
     color: var(--primary-text-color)
@@ -140,37 +140,37 @@ body{
 .lineBetween,
 .point,
 .innerCircle {
-  transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .bringBack:hover .lineBetween,
 .bringBack:hover .point {
-  opacity: 0;
-  transform: scaleY(0);
+    opacity: 0;
+    transform: scaleY(0);
 }
 
 .bringBack:hover .innerCircle {
-  opacity: 1;
+    opacity: 1;
 }
 
 .bringBack:not(:hover) .lineBetween,
 .bringBack:not(:hover) .point {
-  opacity: 1;
-  transform: scaleY(1);
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .bringBack:not(:hover) .innerCircle {
-  opacity: 0;
+    opacity: 0;
 }
 
-#selectHeading{
+#selectHeading {
     text-align: center;
     font-weight: 700;
     font-size: 3vw;
     margin-top: 4vh;
 }
 
-#earthContainer{
+#earthContainer {
     width: 35vw;
     height: 70vh;
     background: url(../images/earth.png);
@@ -198,7 +198,7 @@ body{
 .leftContinent,
 .lineContinent {
     background: transparent;
-    margin-right: 1vw; 
+    margin-right: 1vw;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -224,55 +224,57 @@ body{
     cursor: pointer;
 }
 
-a, a:active, a::before { 
+a,
+a:active,
+a::before {
     text-decoration: none;
     color: var(--primary-text-color) !important;
 }
 
-#northAmerica{
+#northAmerica {
     position: relative;
     top: -5vh;
     right: 7vw;
 }
 
-#europe{
+#europe {
     position: relative;
     top: -15vh;
     left: 18vw;
 }
 
-#rightLine{
+#rightLine {
     width: 10vw;
     margin-left: 1vw;
     align-items: center;
 }
 
-#asia{
+#asia {
     position: relative;
     top: -15vh;
-    left: 30vw; 
+    left: 30vw;
 }
 
-#africa{
+#africa {
     position: relative;
     top: 1vh;
     left: 20vw;
 }
 
-#africaLine{
+#africaLine {
     width: 15vw;
     margin-left: 1vw;
     height: 1.7px;
     align-items: center;
 }
 
-#australia{
+#australia {
     position: relative;
     top: 5vh;
     left: 31.5vw;
 }
 
-#antarctica{
+#antarctica {
     position: relative;
     top: 15vh;
     left: 20vw;
