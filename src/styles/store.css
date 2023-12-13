@@ -56,7 +56,7 @@ p {
     left: -0.4vw;
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     background: transparent;
     color: var(--primary-text-color);
 }
@@ -76,7 +76,7 @@ a {
 #shopHeading {
     color: #1F5A9E;
     font-family: 'Graphik', serif;
-    font-size: 6rem;
+    font-size: 6vw;
     font-weight: 700;
     margin-left: 6vw;
     background: transparent;
@@ -96,10 +96,10 @@ a {
 
 .bigCard,
 .smallCard {
-    margin-right: 1rem;
-    height: 44rem;
-    width: 38rem;
-    border-radius: 1.25rem;
+    margin-right: 1vw;
+    height: 64vh;
+    width: 38vw;
+    border-radius: 1.25vw;
     border: 3px solid var(--card-border);
     background: var(--big-card-fill);
     position: relative;
@@ -110,12 +110,12 @@ a {
 }
 
 .bigCard:last-child {
-    width: 30rem;
+    width: 30vw;
 }
 
 .smallCard {
-    height: 21rem;
-    width: 22rem;
+    height: 31vh;
+    width: 22vw;
     background: #C4C4C4;
 }
 
@@ -125,7 +125,7 @@ a {
 }
 
 .smallCard:last-child {
-    margin-top: 1.5rem;
+    margin-top: 1.5vh;
     background: url(../images/cherryTree.png) center center no-repeat var(--big-card-fill);
     background-repeat: no-repeat;
     z-index: 1;
@@ -137,8 +137,8 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom-left-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25vw;
+    border-bottom-right-radius: 1.25vw;
     color: #FFF;
     width: 100%;
     height: 22vh;
@@ -160,8 +160,8 @@ a {
     right: 0;
     height: 11vh;
     background: #505050;
-    border-bottom-left-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25vw;
+    border-bottom-right-radius: 1.25vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,3 +193,4 @@ a {
     background-size: 140%;
     background-position: center 40%;
 }
+
