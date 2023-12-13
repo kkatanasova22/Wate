@@ -2,18 +2,12 @@ let savedCoins = localStorage.getItem("coins");
 let coinsDisplay = document.getElementById("coinsDisplay");
 
 if (savedCoins !== null) {
-    coinsDisplay.textContent = savedCoins + "W";
+  coinsDisplay.textContent = savedCoins + "W";
 } else {
-    coinsDisplay.textContent = "0W";
+  coinsDisplay.textContent = "0W";
 }
 
-let shopBtn = document.getElementById("shopBtn");
-
-shopBtn.addEventListener("click", function() {
-    window.location.href = "store.html";
+document.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("theme");
+  document.body.setAttribute("theme", theme);
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const theme = localStorage.getItem('theme');
-    document.body.setAttribute('theme', theme);
-  });

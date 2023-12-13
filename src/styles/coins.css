@@ -50,12 +50,16 @@ body {
     bottom: 0vh;
     left: 0vw;
     max-width: 34vw;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #rightCoins {
     top: 1vh;
     right: 2vw;
     max-width: 26vw;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .currencyIndicator {
