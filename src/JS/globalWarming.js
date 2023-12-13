@@ -1,12 +1,9 @@
-import "../styles/styles.css";
-import * as module from "../JS/hambMenu.js";
-import { scene } from "./renderer.js";
-import { lightBackground } from "./backgroundChanger.js";
-import { updateHamburgerColor, calculateVwWidth } from "../JS/hambMenu.js";
-import { darkBackground } from "./backgroundChanger.js";
-import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
+import * as module from "./hambMenu.js";
+import { scene } from "./gwRenderer.js";
+import { lightBackground } from "./backgroundChanger.js";
+import { updateHamburgerColor, calculateVwWidth } from "./hambMenu.js";
+import { darkBackground } from "./backgroundChanger.js";
 let autoTheme;
 if (autoTheme == true) {
   applySystemDefault();
@@ -14,10 +11,9 @@ if (autoTheme == true) {
 
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themeIndicator = document.getElementById("themeIndicator");
-const translateIcon = document.getElementById("translateIcon");
 let body = document.querySelector("body");
 let elementsToStyle = document.querySelectorAll(
-  "#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb"
+  "#heading, #indentHeading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb, #gwHeading, #gwParagraph"
 );
 
 function applyDarkMode() {
@@ -47,7 +43,6 @@ function applyLightMode() {
   );
   themeIndicator.textContent = "selected: light";
 }
-
 function applySystemDefault() {
   const storedTheme = localStorage.getItem("theme");
   const prefersDark =
@@ -85,7 +80,7 @@ themeSelect.addEventListener("mouseout", () => {
   themeIndicator.style.opacity = "0";
 });
 
-function setThemeAndSaveToLocalStorage(theme) {
+function setSavedPreferred(theme) {
   if (theme === "dark") {
     applyDarkMode();
   } else if (theme === "light") {
@@ -98,13 +93,13 @@ function setThemeAndSaveToLocalStorage(theme) {
 }
 
 document.getElementById("selectDark").onclick = function () {
-  setThemeAndSaveToLocalStorage("dark");
+  setSavedPreferred("dark");
 };
 
 document.getElementById("selectLight").onclick = function () {
-  setThemeAndSaveToLocalStorage("light");
+  setSavedPreferred("light");
 };
 
 document.getElementById("selectDefault").onclick = function () {
-  setThemeAndSaveToLocalStorage("automatic");
+  setSavedPreferred("automatic");
 };

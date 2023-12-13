@@ -1,5 +1,5 @@
 .menu {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #E9EEF1D1;
     width: 100vw;
@@ -10,7 +10,16 @@
     pointer-events: none;
     transition: opacity 0.25s ease-in-out, z-index 0s ease-in-out;
 }
-
+#hamb {
+    user-select: none;
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+}
 .menu.open {
     opacity: 1;
     z-index: 0;
@@ -102,16 +111,6 @@
     opacity: 1;
 }
 
-.iconText {
-    font-size: 2vw;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out;
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-}
 
 .iconContainer:hover .iconText {
     opacity: 1;
@@ -149,4 +148,188 @@
 
 body{
     overflow-x: hidden;
+}.menu {
+    position: fixed;
+    bottom: 0;
+    background: #E9EEF1D1;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out, z-index 0s ease-in-out;
+}
+#hamb {
+    user-select: none;
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+}
+.menu.open {
+    opacity: 1;
+    z-index: 0;
+    pointer-events: auto;
+    transition: opacity 0.25s ease-out, z-index;
+    overflow: hidden;
+}
+
+.socialIcons {
+    position: fixed;
+    top: 4vh;
+    right: 2vw;
+}
+
+.socialIcons img {
+    padding: 0.4vw;
+    -webkit-user-drag: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 0.4vw;
+    max-width: 2.5vw;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.socialIcons img:hover {
+    background-color: rgba(138, 138, 138, 0.397);
+}
+
+#themeIndicator,
+#translateIcon {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65vh;
+    opacity: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#themeIndicator {
+    font-size: 1.8vw;
+}
+
+#translateIcon {
+    width: 4vw;
+    position: fixed;
+    top: 85vh;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sideIcons {
+    top: 8vh;
+    position: fixed;
+    left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideIcons img {
+    width: 3vw;
+    margin-right: 0.5vw;
+    -webkit-user-drag: none;
+}
+
+.iconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5vw;
+    border-radius: 15px;
+    margin-block: 1vh;
+    transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
+    margin-block: 0.4vh;
+    width: auto;
+    width: fit-content;
+}
+
+.iconContainer:hover {
+    width: fit-content;
+}
+
+.iconContainer:hover {
+    background-color: rgba(41, 41, 41, 0.071);
+}
+
+.sideIcons img {
+    width: 3vw;
+    margin-right: 0.5vw;
+    -webkit-user-drag: none;
+}
+
+.iconContainer:hover .iconText {
+    opacity: 1;
+}
+
+.iconText {
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.iconContainer:hover .iconText {
+    opacity: 1;
+}
+
+.themeSelect {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.socialIcons {
+    position: fixed;
+    top: 4vh;
+    right: 2vw;
+}
+
+.socialIcons img {
+    padding: 0.4vw;
+    -webkit-user-drag: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 0.4vw;
+    max-width: 2.5vw;
+    transition: background-color 0.25s ease-in-out;
+}
+.themeSelect img {
+    justify-content: center;
+    width: 12vw;
+    -webkit-user-drag: none;
+    padding: 0.5vw;
+    border-radius: 15px;
+    transition: background-color 0.185s ease-in-out;
+}
+
+.themeSelect img:hover {
+    background-color: rgba(110, 110, 110, 0.2);
+}
+
+.separator {
+    width: 1px;
+    height: 95vh;
+    background-color: black;
+    transform: rotate(18.4deg);
+    margin-inline: 7vw;
+}
+
+body{
+    overflow-x: hidden;
+}
+.socialIcons img:hover {
+    background-color: rgba(138, 138, 138, 0.397);
 }

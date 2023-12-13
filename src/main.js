@@ -1,25 +1,21 @@
-import "../styles/styles.css";
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import * as module from "../JS/hambMenu.js";
+import '../styles/navbar.css';
 import { scene } from "./renderer.js";
 import { lightBackground } from "./backgroundChanger.js";
 import { updateHamburgerColor, calculateVwWidth } from "../JS/hambMenu.js";
 import { darkBackground } from "./backgroundChanger.js";
-import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-
 let autoTheme;
 if (autoTheme == true) {
   applySystemDefault();
 }
-
 let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themeIndicator = document.getElementById("themeIndicator");
-const translateIcon = document.getElementById("translateIcon");
 let body = document.querySelector("body");
 let elementsToStyle = document.querySelectorAll(
   "#heading, .smalltext, .plantLink, .coinLink, #fineprint, #hamb"
 );
-
 function applyDarkMode() {
   darkBackground(scene);
   body.classList.add("dark-mode");
@@ -33,7 +29,6 @@ function applyDarkMode() {
   );
   themeIndicator.textContent = "selected: dark";
 }
-
 function applyLightMode() {
   lightBackground(scene);
   body.classList.remove("dark-mode");
@@ -47,7 +42,6 @@ function applyLightMode() {
   );
   themeIndicator.textContent = "selected: light";
 }
-
 function applySystemDefault() {
   const storedTheme = localStorage.getItem("theme");
   const prefersDark =
@@ -85,7 +79,7 @@ themeSelect.addEventListener("mouseout", () => {
   themeIndicator.style.opacity = "0";
 });
 
-function setThemeAndSaveToLocalStorage(theme) {
+function setSavedPreferred(theme) {
   if (theme === "dark") {
     applyDarkMode();
   } else if (theme === "light") {
@@ -98,13 +92,13 @@ function setThemeAndSaveToLocalStorage(theme) {
 }
 
 document.getElementById("selectDark").onclick = function () {
-  setThemeAndSaveToLocalStorage("dark");
+  setSavedPreferred("dark");
 };
 
 document.getElementById("selectLight").onclick = function () {
-  setThemeAndSaveToLocalStorage("light");
+  setSavedPreferred("light");
 };
 
 document.getElementById("selectDefault").onclick = function () {
-  setThemeAndSaveToLocalStorage("automatic");
+  setSavedPreferred("automatic");
 };

@@ -1,21 +1,12 @@
-import '../styles/styles.css';
-import {scene} from './renderer.js';
 import * as THREE from 'three';
-
+let body = document.querySelector("body");
 export function lightBackground(scene) {
-    const lightTexture = new THREE.TextureLoader().load('../misc/lightbg.png');
-    if (scene) {
-        scene.background = lightTexture;
-    } else {
-        console.error('Scene is undefined.');
-    }
+    body.style.backgroundImage = "url('../misc/lightbg.png')"
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
 }
-
 export function darkBackground(scene) {
-    const darkTexture = new THREE.TextureLoader().load('../misc/darkbg.png');
-    if (scene) {
-        scene.background = darkTexture;
-    } else {
-        console.error('Scene is undefined.');
-    }
+    body.style.backgroundImage = "url('../misc/darkbg.png')"
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
 }
