@@ -32,6 +32,7 @@ function setGame() {
   treeConst.addEventListener("dragstart", dragStart);
 
   const gameContainer = document.getElementById("gameContainer");
+  // Change image background when buying a new item
   let checkSoil = localStorage.getItem("soilType");
   if (checkSoil == "Soil") {
     gameContainer.style.backgroundImage = "url('../images/dirtySoil.png')";
@@ -44,6 +45,8 @@ function setGame() {
   const container = document.getElementById("soilContainer");
   container.addEventListener("dragover", dragOver);
 
+
+  /*Generate 9 soils*/
   for (let i = 0; i < 9; i++) {
     let soil = document.createElement("div");
     soil.setAttribute("class", "soils");
@@ -52,6 +55,7 @@ function setGame() {
     container.appendChild(soil);
   }
 
+  /*Generate 9 trees*/
   for (let i = 0; i < 8; i++) {
     let tree = document.createElement("div");
     let newTree = treeConst.cloneNode();
@@ -74,8 +78,6 @@ function setGame() {
   }
 
   function drop(event) {
-    event.preventDefault();
-
     let data = event.dataTransfer.getData("text/plain");
 
     let draggedElement = document.getElementById(data);
