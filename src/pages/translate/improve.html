@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/translatePages.css">
+    <link rel="icon" type="image/x-icon" href="../../images/wateLogo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="../../styles/improve.css">
+    <title>Wate</title>
+</head>
+<body>
+    <div class="container">
+        <span class="material-symbols-outlined" id="hamb">menu</span>
+        <h1 id="improveHeading">Подобрете</h1>
+        <div id="smallTexts">
+            <p id="choose">Изберете подобрение</p>
+            <p id="purchaseText">Купете</p>
+    </div>
+
+    <hr>
+
+    <div id="improveContainer">
+        <div id="solar" class="improvement">
+            <div class="image">
+                <div id="solarImg"></div>
+            </div>
+    
+            <div class="textInside">
+                <h1>Слънчеви улични светлини</h1>
+                <p>Инвестирайте в слънчеви улични светлини и друга инфраструктура като автобусни спирки, лавици и обществени пространства.</p>
+            </div>
+            <button data-cost="300" class="buyButton">300W</button>
+        </div>
+    
+        <hr>
+        <div id="garden" class="improvement">
+            <div class="image">
+                <div id="gardenImg"></div>
+            </div>
+    
+            <div class="textInside">
+                <h1>Инициативи за общински градини</h1>
+                <p>Подкрепете и насърчете проекти за общински градини, предоставяйки ресурси като семена, градински инструменти и компостни бакове.</p>
+            </div>
+            <button data-cost="250" class="buyButton">250W</button>
+        </div>
+    
+        <hr>
+    
+        <div id="transport" class="improvement">
+            <div class="image">
+                <div id="transportImg"></div>
+            </div>
+            <div class="textInside">
+                <h1>Еко-приятен транспорт</h1>
+                <p>Въведете стимули за еко-приятни транспортни опции, като електрически велосипеди, автобуси, скутери и електрически коли.</p>
+            </div>
+            <button data-cost="350" class="buyButton">350W</button>
+        </div>
+    </div>
+        
+    <div class="menu">
+        
+        <div class="socialIcons">
+            <img src="../../misc/instagram.png" id="instagram">
+            <img src="../../misc/facebook.png" id="facebook">
+            <img src="../../misc/twitter.png" id="twitter">
+            <img src="../../misc/email.png" id="email">
+        </div>
+        
+        <h1 id="themeIndicator"></h1>
+        
+        <a href="../../pages/improve.html"><img src="../../misc/translate.svg" id="translateIcon"></a>
+        
+        <div class="sideIcons">
+            <a href="../../pages/coins.html">
+                <div class="iconContainer" id="coinSc">
+                    <img src="../../misc/coins.svg">
+                    <span class="iconText">МОНЕТИ</span>
+                </div>
+            </a>
+        
+            <a href="../../pages/game.html">
+                <div class="iconContainer" id="gameSc">
+                    <img src="../../misc/game.svg">
+                    <span class="iconText">ИГРАЙТЕ ИГРАТА</span>
+                </div>
+            </a>
+        
+            <a href="../../pages/globalWarming.html">
+                <div class="iconContainer" id="climateSc">
+                    <img src="../../misc/thermometer.svg">
+                    <span class="iconText">КЛИМАТ</span>
+                </div>
+            </a>
+        
+            <a href="../../pages/continents.html">
+                <div class="iconContainer" id="continentsSc">
+                    <img src="../../misc/pin.svg">
+                    <span class="iconText">КОНТИНЕНТИ</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="themeSelect">
+        
+            <img src="../../misc/moon.svg" id="selectDark">
+            <span class="separator"></span>
+            <img src="../../misc/sun.svg" id="selectLight">
+            <span class="separator"></span>
+            <img src="../../misc/systemDefault.svg" id="selectDefault">
+        
+        </div>
+    </div>
+</div>
+        
+<script type="module" src="../../JS/hambMenu.js"></script>
+<script src="../../JS/improve.js"></script>
+<script src="../../JS/darkMode.js"></script>
+        
+</body>
+</html>
