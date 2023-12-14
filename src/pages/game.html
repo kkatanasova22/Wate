@@ -4,27 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/game.css">
+    <link rel="icon" type="image/x-icon" href="../images/wateLogo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/> <!-- symbols -->
     <title>Wate</title>
 </head>
 <body>
-
+  <div class="container">
+    <span class="material-symbols-outlined" id="hamb">menu</span>
     <div class="coinLink">
         <span class="material-symbols-outlined">chevron_left</span>
-        <a id="smalltext" href="pages/coins.html">COINS</a>
+        <a id="smalltext" href="./coins.html">HOME</a>
+    </div>
+    
+    <div id="textContainer">
+      <h1>Plant a tree</h1>
+      <p>and earn coins</p>
+      <p>coins earned: <span id="earnerdCoins"></span></p>
     </div>
 
-    <div id="textContainer">
-        <h1>Plant a tree</h1>
-        <p>and earn coins</p>
-          <div id="trees">
-            <img id="treeConst" src="../images/tree.png">
-          </div>
-        </div>
+    <div class="grouper">
+      <div id="trees">
+        <img class="treeConst">
+      </div>
 
-        <div id="container">
+      <div id="gameContainer">
+        <div id="soilContainer">
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="menu">
+      <div class="socialIcons">
+        <img src="../misc/instagram.png" id="instagram">
+        <img src="../misc/facebook.png" id="facebook">
+        <img src="../misc/twitter.png" id="twitter">
+        <img src="../misc/email.png" id="email">
+      </div>
+
+      <h1 id="themeIndicator"></h1>
+      <img src="../misc/translate.svg" id="translateIcon">
+      <div class="sideIcons">
+        <a href="../pages/coins.html">
+          <div class="iconContainer" id="coinSc">
+            <img src="../misc/coins.svg">
+            <span class="iconText">COINS</span>
           </div>
+        </a>
+
+        <a href="../pages/game.html">
+          <div class="iconContainer" id="gameSc">
+            <img src="../misc/game.svg">
+            <span class="iconText">PLAY GAME</span>
+          </div>
+        </a>
+
+        <a href="../pages/globalWarming.html">
+          <div class="iconContainer" id="climateSc">
+            <img src="../misc/thermometer.svg">
+            <span class="iconText">CLIMATE</span>
+          </div>
+        </a>
+
+        <a href="../pages/continents.html">
+          <div class="iconContainer" id="continentsSc">
+            <img src="../misc/pin.svg">
+            <span class="iconText">CONTINENTS</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="themeSelect">
+        <img src="../misc/moon.svg" id="selectDark">
+        <span class="separator"></span>
+        <img src="../misc/sun.svg" id="selectLight">
+        <span class="separator"></span>
+        <img src="../misc/systemDefault.svg" id="selectDefault">
+      </div>
+    </div>
 
     <script src="../JS/game.js"></script>
+    <script type="module" src="../JS/hambMenu.js"></script>
+
 </body>
 </html>

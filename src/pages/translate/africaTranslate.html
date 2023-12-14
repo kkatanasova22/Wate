@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wate</title>
+    <link rel="stylesheet" href="../../styles/translatePages.css">
+    <link rel="stylesheet" href="../../styles/continentInfo.css">
+    <link rel="icon" type="image/x-icon" href="../../images/wateLogo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+    <div class="container">
+        <span class="material-symbols-outlined" id="hamb">menu</span>
+        <div id="containerBasis">
+            <h1 id="continentHeading">Относно глобалното<br>затопляне в <span id="bold">Африка</span></h1>
+            <img src="../../images/africaMap.png" id="continentMap">
+        </div>
+        <hr id="separator">
+        <div id="containerBasisInfo" class="container" data-aos="fade-right">
+            <div id="change">
+                <h1 id="changes">Промени</h1>
+                <ul class="basisInfoBullet" id="changeUL">
+                    <li id="infoChanges">Повишаването на температурите и промените във валежите засягат земеделието, наличността на вода и сигурността на храните. Засушаването представлява заплаха за много региони.</li>
+                </ul>
+                <img class="changesImage" src="../../images/upperImage.png" alt="Изображение на промените">
+            </div>
+            <div id="impact">
+                <h1 id="impacts">Въздействия</h1>
+                <ul class="basisInfoBullet" id="impactUL">
+                    <li>Уязвимост към суши и вълни на горещина, засягащи както селското, така и градското население. Могат да се появят промени в образа на разпространение на болести.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr id="separator">
+
+        <div id="howHelp" class="container" data-aos="fade-left">
+            <h1 id="how">Как можем да помогнем?</h1>
+            <div id="containerBasisInfo">
+                <div id="individual">
+                    <h1 id="individuals">Като индивид</h1>
+                    <ul class="basisInfoBullet" id="changeUL">
+                        <li id="infoChanges">Използвайте обществен транспорт, карайте велосипед или ходете пеша вместо да се полагате на лични превозни средства. Подкрепете циркуларната икономика чрез намаляване, повторна употреба и рециклиране.</li>
+                    </ul>
+                    <img class="changesImage" src="https://cdn.discordapp.com/attachments/723998679400316949/1182441960275972156/bottomImage.png?ex=6584b5e4&is=657240e4&hm=3869c6a1e20176abee39da238c59bde2e7e3b763b5ae4781f2b306524b898c6d&" alt="Изображение на промените">
+                </div>
+
+                <div id="community">
+                    <h1 id="communities">Като общност</h1>
+                    <ul class="basisInfoBullet" id="impactUL">
+                        <li>Участвайте в общински градини, насърчавайте местно и устойчиво производство на храна и подкрепяйте инициативи за възобновяема енергия. Застъпвайте се за по-строги екологични регулации.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="../improve.html">
+              <button id="impBtn" data-aos="fade-right">Подобрете</button>
+            </a>
+        </div>
+        <div class="menu">
+            <div class="socialIcons">
+              <img src="../../misc/instagram.png" id="instagram">
+              <img src="../../misc/facebook.png" id="facebook">
+              <img src="../../misc/twitter.png" id="twitter">
+              <img src="../../misc/email.png" id="email">
+            </div>
+            <h1 id="themeIndicator"></h1>
+            <img src="../../misc/translate.svg" id="translateIcon">
+            <div class="sideIcons">
+              <a href="../coins.html"><div class="iconContainer" id="coinSc">
+                <img src="../../misc/coins.svg">
+                <span class="iconText">МОНЕТИ</span>
+              </div></a>
+              <a href="../game.html"><div class="iconContainer" id="gameSc">
+                <img src="../../misc/game.svg">
+                <span class="iconText">ИГРАЙТЕ ИГРА</span>
+              </div></a>
+              <a href="../globalWarming.html"><div class="iconContainer" id="climateSc">
+                <img src="../../misc/thermometer.svg">
+                <span class="iconText">КЛИМАТ</span>
+              </div></a>
+              <a href="../continents.html"><div class="iconContainer" id="continentsSc">
+                <img src="../../misc/pin.svg">
+                <span class="iconText">КОНТИНЕНТИ</span>
+              </div></a>
+            </div>
+            <div class="themeSelect">
+              <img src="../../misc/moon.svg" id="selectDark">
+              <span class="separator"></span> 
+              <img src="../../misc/sun.svg" id="selectLight">
+              <span class="separator"></span>
+              <img src="../../misc/systemDefault.svg" id="selectDefault">
+            </div>
+          </div>
+    </div>
+
+    <script type="module" src="../../JS/hambMenu.js"></script>
+    <script src="../../JS/darkMode.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

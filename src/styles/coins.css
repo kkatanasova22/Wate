@@ -1,0 +1,211 @@
+::selection {
+    background: var(--selection-background);
+    color: var(--selection-color);
+}
+
+.container {
+    overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --button-fill: #D0DCDB;
+    --selection-color: #fff;
+    --selection-background: #000;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --button-fill: #1F2227;
+    --selection-color: #000;
+    --selection-background: #fff;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+#leftCoins,
+#rightCoins,
+#earnBt,
+#shopBtn {
+    z-index: 0;
+    position: fixed;
+}
+
+#leftCoins {
+    bottom: 0vh;
+    left: 0vw;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#rightCoins {
+    top: 1vh;
+    right: 2vw;
+    width: 26vw;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.currencyIndicator {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+#coins,
+#coinsDisplay {
+    margin-top: 25vh;
+    font-family: Graphik;
+    font-size: 3.7vw;
+    font-weight: 600;
+}
+
+#coinsDisplay {
+    color: #1761AA;
+}
+
+#earnBt {
+    position: fixed;
+    margin-top: 46vh;
+    margin-left: 37.5vw;
+    border-radius: 1.3vw;
+    border: 2px solid #1761AA;
+    background: rgba(0, 0, 0, 0.00);
+    color: #1761AA;
+    transition: background-color 0.25s ease-in-out;
+    width: 24vw;
+    height: 6vw;
+    font-family: Graphik;
+    font-size: 3vw;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+#shopBtn {
+    position: fixed;
+    margin-left: 42.5vw;
+    margin-top: 63.5vh;
+    transition: background-color 0.25s ease-in-out;
+    border-radius: 1vw;
+    background: var(--button-fill);
+    border: 2px solid #1761AA;
+    width: 16vw;
+    height: 3.5vw;
+    color: #1761AA;
+    font-family: Graphik;
+    font-size: 2vw;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+    z-index: 0;
+}
+
+#earnBt:hover,
+#shopBtn:hover {
+    color: rgb(255, 255, 255);
+    border: 2px solid #1761AA;
+    background-color: #1761AA;
+    user-select: none;
+}
+
+#coins {
+    color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 368px) and (max-width: 1200px){
+
+    #container{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #coinsDisplay{
+        font-size: 6vw;
+    }
+
+    #leftCoins{
+        position: fixed;
+        transform: scale(0.6);
+        left: -10vw;
+        bottom: -10vw;
+    }
+
+    #rightCoins{
+        transform: scale(1);
+    }
+
+    #coins{
+        font-size: 6vw;
+        margin-left: 10vw;
+    }
+    
+    #earnBt{
+        width: 30vw;
+        height: 9vh;
+        font-size: 4vw;
+    }
+
+    #shopBtn{
+        width: 20vw;
+        height: 5vh;
+        font-size: 3vw;
+    }
+}
+
+/* Small devices (phones)  */
+@media screen and (max-width: 767px) {
+    #rightCoins{
+        transform: scale(0.6);
+        width: 60vw;
+        margin-top: -4vh;
+    }
+
+    #leftCoins{
+        transform: scale(0.9);
+        height: 45vh;
+        width: 60vw;
+    }
+
+    #coins{
+        font-size: 9vw;
+        margin-left: 1vw;
+        margin-bottom: -1vw;
+    }
+
+    #earnBt{
+        height: 6vh;
+        width: 40vw;
+        font-size: 5.5vw;
+    }
+
+    #hamb{
+        transform: scale(2);
+    }
+
+    #shopBtn{
+        margin-top: 55vh;
+        width: 30vw;
+        font-size: 4vw;
+    }
+
+    #coinsDisplay{
+        font-size: 10vw;
+    }
+}

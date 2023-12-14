@@ -1,0 +1,374 @@
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+
+::selection {
+    background: var(--selection-background) !important;
+    color: var(--selection-color) !important;
+}
+
+.container {
+    overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --selection-color: #fff;
+    --selection-background: #000;
+    --primary-scroll: #f1f1f1;
+    --secondary-scroll: #888;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --selection-color: #000;
+    --selection-background: #fff;
+    --primary-scroll: #242424;
+    --secondary-scroll: #000;
+}
+
+* {
+    padding: 0;
+    font-family: Graphik;
+}
+
+body {
+    background: var(--primary-color);
+    scroll-behavior: smooth;
+}
+
+p,
+h1,
+li {
+    color: var(--primary-text-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-scroll);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-scroll);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#containerBasis {
+    max-width: fit-content;
+    height: 70vh;
+}
+
+#heading {
+    color: var(--primary-text-color);
+
+    font-family: Graphik;
+    font-size: 4.5vw;
+    font-weight: 600;
+
+    margin-left: 7vw;
+    margin-top: 28vh;
+
+    max-width: 62vw;
+}
+
+#bold {
+    font-size: 6vw;
+    font-weight: 800;
+    color: var(--primary-text-color);
+}
+
+#continentMap {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 66vw;
+    height: 99vh;
+    opacity: 0.4;
+
+    user-select: none;
+    background: transparent;
+}
+
+#continentHeading {
+    font-family: 'Grapik', sans-serif;
+    color: var(--primary-text-color);
+    font-family: Graphik;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-left: 7vw;
+    margin-top: 29vh;
+    padding-bottom: 29vh;
+    line-height: 1.1;
+    max-width: 62vw;
+}
+
+#separator {
+    border: 1px var(--primary-text-color) solid;
+    border-radius: 10px;
+    max-width: 90vw;
+}
+
+#change,
+#individual {
+    height: 50vh;
+}
+
+.basisInfoBullet {
+    list-style-type: none;
+    padding: 0;
+}
+
+.basisInfoBullet li {
+    padding-left: 4vw;
+    background: url('../images/leafIcon.png') no-repeat left top;
+    background-size: 2vw 4vh;
+    margin-bottom: 10px;
+}
+
+#changeUL {
+    margin-left: 9vw;
+}
+
+#infoChanges {
+    max-width: 31vw;
+    font-size: 1.5vw;
+}
+
+#changes,
+#individuals {
+    font-size: 4vw;
+    margin-left: 9vw;
+    margin-top: 15vh;
+}
+
+.changesImage {
+    position: relative;
+    width: 57vw;
+    height: 68.6vh;
+    opacity: 0.4;
+
+    float: right;
+    margin-top: -46vh;
+    margin-right: 3vw;
+    background: transparent;
+    user-select: none;
+}
+
+#impact {
+    height: 35vh;
+}
+
+#impacts,
+#communities {
+    text-align: right;
+    font-size: 4vw;
+    margin-right: 42vw;
+}
+
+#impacts {
+    font-size: 4vw;
+    margin-right: 42vw;
+    margin-top: 8vh;
+    text-align: right;
+}
+
+#impactUL {
+    float: right;
+    font-size: 1.5vw;
+    margin-right: 26vw;
+    max-width: 31vw;
+    margin-bottom: 5vh;
+    background: transparent;
+}
+
+#how {
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 5vw;
+}
+
+#communities {
+    margin-right: 25vw;
+    margin-bottom: 1vh;
+}
+
+#impBtn {
+    color: #1761AA;
+    font-size: 3vw;
+    border-radius: 1.625rem;
+    border: 2px solid #1761AA;
+    width: 25vw;
+    height: 10vh;
+    cursor: pointer;
+
+    background: rgba(0, 0, 0, 0.00);
+    margin-left: 8vw;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+
+    transition: 0.25s ease-in-out;
+}
+
+#impBtn:hover {
+    color: white;
+    background-color: #1761AA;
+    border: 2px solid #1761AA;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+/*1/2 screen*/
+
+@media screen and (min-width: 368px) and (max-width: 1591px) {
+    #continentMap {
+        width: 66vw;
+        height: 60vh;
+    }
+
+    #containerBasis {
+        height: 40vh;
+    }
+
+    .basisInfoBullet li {
+        background-size: 1.8vw 2vh;
+    }
+
+    .changesImage {
+        width: 47vw;
+        height: 35vh;
+        margin-top: -30vh;
+    }
+
+    #change,
+    #individual {
+        height: 30vh;
+    }
+
+    #impact {
+        margin-top: -5vh;
+        height: 25vh;
+    }
+
+    #impBtn {
+        font-size: 2.5vw;
+        width: 20vw;
+        height: 7vh;
+        margin-top: 0vh;
+        margin-bottom: 10vh;
+    }
+
+    #impactUL,
+    #infoChanges {
+        font-size: 1.8vw;
+    }
+}
+
+/*Fix separator under impact*/
+
+@media screen and (min-width: 900px) and (max-width: 1980px) {
+    #impact {
+        height: 40vh;
+    }
+}
+
+/* Small devices (phones)  */
+@media screen and (max-width: 767px) {
+    #continentMap {
+        position: absolute;
+        top: 10vh;
+        width: 66vw;
+        height: 30vh;
+    }
+
+    #containerBasis {
+        height: 30vh;
+    }
+
+    #heading {
+        font-size: 10vw;
+    }
+
+    #bold {
+        font-size: 12vw;
+    }
+
+    .basisInfoBullet li {
+        background: transparent;
+    }
+
+    .changesImage:first-child {
+        width: 47vw;
+        height: 15vh;
+        position: absolute;
+        margin-top: 4vh;
+        float: left;
+    }
+
+    #changes,
+    #individuals {
+        font-size: 8vw;
+        margin-left: 9vw;
+        margin-top: 15vh;
+    }
+
+    #impactUL,
+    #infoChanges {
+        font-size: 3vw;
+        max-width: 50vw;
+        margin-right: 5vw;
+    }
+
+    #impacts,
+    #communities {
+        margin-top: -10vh;
+        text-align: right;
+        font-size: 8vw;
+        margin-right: 27vw;
+    }
+
+    #how {
+        font-size: 10vw;
+        margin-bottom: -3vh;
+    }
+
+    #impBtn {
+        height: 12vh;
+        width: 28vw;
+        margin-top: 0vh;
+        font-size: 5vw;
+    }
+
+    .changesImage:last-child {
+        bottom: -15vh;
+        width: 47vw;
+        height: 18vh;
+    }
+
+}
