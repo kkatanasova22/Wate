@@ -1,0 +1,281 @@
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+
+* {
+    padding: 0;
+    font-family: Graphik;
+}
+
+::selection {
+    background: var(--selection-background) !important;
+    color: var(--selection-color) !important;
+}
+
+.container {
+    overflow: hidden;
+}
+
+#hamb {
+    top: 1vh;
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    color: var(--primary-text-color) !important;
+}
+
+:root {
+    --primary-color: #F6F4EB;
+    --primary-text-color: #000000;
+    --button-fill: #D0DCDB;
+    --selection-color: #fff;
+    --selection-background: #000;
+}
+
+[theme="dark"] {
+    --primary-color: #12151A;
+    --primary-text-color: #FFFFFF;
+    --button-fill: #1F2227;
+    --selection-color: #000;
+    --selection-background: #fff;
+}
+
+
+body {
+    background: var(--primary-color);
+    overflow: hidden;
+    color: var(--primary-text-color)
+}
+
+.bringBack {
+    position: absolute;
+    right: 0;
+    top: 2vh;
+    margin: auto;
+    width: 5vw;
+    height: 10vh;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    z-index: 2;
+    transition-property: color, opacity;
+    transition-duration: 0.2s;
+}
+
+.innerCircle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1vh;
+    margin: auto;
+    width: 0.3vw;
+    height: 0.7vh;
+    border-radius: 50%;
+    background: var(--primary-text-color);
+    opacity: 0;
+    transform: scale(0.5);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    z-index: 3;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1.4vw;
+    height: 2.5vh;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 50%;
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    z-index: 2;
+}
+
+.lineBetween {
+    position: absolute;
+    top: 1.6vw;
+    left: 0;
+    right: 0;
+    bottom: 2vw;
+    margin: auto;
+    width: 1px;
+    background: var(--primary-text-color);
+    transition-duration: 0.3s;
+    z-index: 1;
+}
+
+.point {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0.5vw;
+    height: 1vh;
+    border-radius: 50%;
+    background: var(--primary-text-color);
+    transition: transform 0.3s;
+    z-index: 0;
+}
+
+.lineBetween {
+    animation: lineBetween cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+}
+
+.point {
+    animation: point cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+}
+
+.circle {
+    animation: circle cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.1s backwards;
+}
+
+.lineBetween,
+.point,
+.innerCircle {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.bringBack:hover .lineBetween,
+.bringBack:hover .point {
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.bringBack:hover .innerCircle {
+    opacity: 1;
+}
+
+.bringBack:not(:hover) .lineBetween,
+.bringBack:not(:hover) .point {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.bringBack:not(:hover) .innerCircle {
+    opacity: 0;
+}
+
+#selectHeading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+#earthContainer {
+    width: 35vw;
+    height: 70vh;
+    background: url(../images/earth.png);
+    margin: 0 auto;
+    margin-top: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#southAmerica {
+    position: relative;
+    top: 50%;
+    right: 14vw;
+}
+
+.pointLineContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.leftContinent,
+.lineContinent {
+    background: transparent;
+    margin-right: 1vw;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pointLineContainer:hover .lineContinent,
+.pointLineContainer:hover .leftContinent {
+    opacity: 1;
+}
+
+.lineContinent {
+    width: 2vw;
+    height: 1.7px;
+    background: var(--primary-text-color);
+    margin-right: 1vw;
+    margin-left: 0.5vw;
+}
+
+.pointContinent {
+    background: var(--primary-text-color);
+    border-radius: 50%;
+    width: 0.3vw;
+    height: 0.6vh;
+    cursor: pointer;
+}
+
+a,
+a:active,
+a::before {
+    text-decoration: none;
+    color: var(--primary-text-color) !important;
+}
+
+#northAmerica {
+    position: relative;
+    top: -5vh;
+    right: 7vw;
+}
+
+#europe {
+    position: relative;
+    top: -15vh;
+    left: 18vw;
+}
+
+#rightLine {
+    width: 10vw;
+    margin-left: 1vw;
+    align-items: center;
+}
+
+#asia {
+    position: relative;
+    top: -15vh;
+    left: 30vw;
+}
+
+#africa {
+    position: relative;
+    top: 1vh;
+    left: 20vw;
+}
+
+#africaLine {
+    width: 15vw;
+    margin-left: 1vw;
+    height: 1.7px;
+    align-items: center;
+}
+
+#australia {
+    position: relative;
+    top: 5vh;
+    left: 31.5vw;
+}
+
+#antarctica {
+    position: relative;
+    top: 15vh;
+    left: 20vw;
+}

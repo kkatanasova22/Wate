@@ -21,9 +21,8 @@
 ## 🗂️ Our Tech Stack
 ### Used code editor & collaborative service:
 <p align="left">
-    <a href="https://visualstudio.microsoft.com/vs/"><img src="https://cdn.discordapp.com/attachments/1103246649075171390/1184517508309454928/image.png?ex=658c42e5&is=6579cde5&hm=deb2caef5d379ddf7bd6bf104d0f0eed580dece9d06e361bd4a85adbf53f4b05&" alt="Visual Studio 2022 logo" width=44px /></a>
+    <a href="https://visualstudio.microsoft.com/vs/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1030px-Visual_Studio_Icon_2019.svg.png" alt="Visual Studio 2022 logo" width=44px /></a>
     <a href="https://github.com/"><img src="https://img.icons8.com/nolan/344/github.png" alt="GitHub logo" width=52px /></a>
-  <a href="https://git-scm.com/"><img src="https://th.bing.com/th/id/R.5dad01124c25d19c78aa763d94c6c3ee?rik=O6yFxpwCtIymFA&pid=ImgRaw&r=0" alt="GitHub logo" width=52px /></a>
 </p>
 
 ### Used tools for our visual elements:

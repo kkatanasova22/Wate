@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand&display=swap&family=Poppins:wght@100&display=swap');
+@font-face {
+    font-family: Graphik;
+    src: url(../fonts/GraphikBlack.otf);
+    src: url(../fonts/GraphikMedium.otf);
+    src: url(../fonts/GraphikRegular.otf);
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--primary-scroll); 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-scroll); 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+:root {
+    --primary-scroll: #f1f1f1;
+    --secondary-scroll: #888; 
+}
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.gwInfo {
+  width: 100vw;
+  height: 100vh;
+  top: 100vh;
+}
+#gwHeading {
+  margin-top: 12vh;
+  margin-left: 32vw;
+  position: absolute;
+  font-family: 'Graphik', sans-serif;
+  font-size: 130px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+canvas#bg {
+  height: max-content;
+}
+#gwParagraph {
+  position: absolute;
+  color: white;
+  text-align: right;
+  font-family: Graphik;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-top: 45vh;
+  text-align: right;
+}
+.earthCaption {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    z-index: 0;
+}
+  
+#heading, #indentHeading {
+    font-family: 'Abril Fatface', serif;
+    font-size: 9vw;
+    font-weight: 350;
+    line-height: 1;
+    margin: 0;
+}
+  
+#indentHeading {
+    margin-left: 6vw;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
