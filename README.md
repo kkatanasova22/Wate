@@ -1,7 +1,7 @@
 <h1 align="center">Team Wate</h1>
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246657363132447/1184249657388445767/WateBanner.jpg?ex=658b4970&is=6578d470&hm=d22f8fcb181bd6f0e03e28cff94cc18ba7b08ec5905564e1d23821d9d15d04d8&">
+    <img src="https://media.discordapp.net/attachments/1169999991801135168/1183935770071928972/image.png?ex=6630421c&is=661dcd1c&hm=919895b0d13567756a743dacfb1043dc953e6292df0665a803f49adde1bcf3aa&=&format=webp&quality=lossless&width=1440&height=639">
 </p>
 
 <p align = "center">
@@ -15,7 +15,7 @@
 <p align="center"><b>What would you do?</b></p>
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
+    <img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162226456035359/linedivider.png?ex=663250da&is=661fdbda&hm=5087a414c1fffa8d66b6e1e5ab13db7396e9f41b1ef617fe60dc5afc47bfa8ce&"/>
 </p>
 
 ## 🗂️ Our Tech Stack
@@ -40,8 +40,8 @@
 <p align="left">
     <a href="https://html.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" width=48px/></a>
     <a href="https://html.com/"><img src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png" alt="CSS logo" width=48px/></a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://cdn.discordapp.com/attachments/1103246657363132447/1184252680017813504/image-removebg-preview_6.png?ex=658b4c41&is=6578d741&hm=eef363e742bfb02d0e45ec6d8786a2c7a1d009f543f9cbfbe16cf7eb2e602d76&" alt="JS logo" height=38 width=35px/></a>
-    <a href="https://threejs.org/"><img src="https://cdn.discordapp.com/attachments/1103246649075171390/1184529771430944868/output-onlinepngtools_1.png?ex=658c4e51&is=6579d951&hm=7c717fc7e9738478414ea2014a13ea549b0d2ee45ff54950d238ae845ab925a6&" alt="ThreeJs logo" width=40px /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162546057547827/js-logo.png?ex=66325126&is=661fdc26&hm=058fca16b84cf4a456eb40742b765161b21b4a983b6e058cbf8a876ded5a0e9a&" alt="JS logo" height=38 width=35px/></a>
+    <a href="https://threejs.org/"><img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162762022391922/logothreejs.png?ex=66325159&is=661fdc59&hm=65cef2f0895705ab6f51f13ff3ff42ae0f137f4859995a3dd792036ee9ebde79&" alt="ThreeJs logo" width=40px /></a>
     <a href="https://michalsnik.github.io/aos/"><img src="https://th.bing.com/th/id/R.e8321a1e9e9145101a8407b57810df83?rik=PjKQMaHoq0EXVw&riu=http%3a%2f%2ffinding-understanding.com%2fimages%2faos.png&ehk=iKiKv0p6UhS9J98i709HG%2fDggtwzM%2bXOUhjsQM%2fjX8o%3d&risl=&pid=ImgRaw&r=0" alt="AOS logo" width=52px /></a>
     <a href="https://vitejs.dev/"><img src="https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png" alt="Vite logo" width=40px /></a>
 </p>
@@ -53,7 +53,7 @@
 </p>
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
+    <img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162226456035359/linedivider.png?ex=663250da&is=661fdbda&hm=5087a414c1fffa8d66b6e1e5ab13db7396e9f41b1ef617fe60dc5afc47bfa8ce&"/>
 </p>
 
 ## 📄 Documents
@@ -68,7 +68,7 @@
   - [Design](https://www.figma.com/file/hwuHN1RB577RBlB1bKQ9uQ/Wate?type=design&node-id=0%3A1&mode=design&t=l7VYUpHxfpya2XN3-1)
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
+    <img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162226456035359/linedivider.png?ex=663250da&is=661fdbda&hm=5087a414c1fffa8d66b6e1e5ab13db7396e9f41b1ef617fe60dc5afc47bfa8ce&"/>
 </p>
 
 ## 💾 Installation
@@ -82,7 +82,7 @@ And then
 <pre>npm run dev</pre>
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
+    <img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162226456035359/linedivider.png?ex=663250da&is=661fdbda&hm=5087a414c1fffa8d66b6e1e5ab13db7396e9f41b1ef617fe60dc5afc47bfa8ce&"/>
 </p>
 
 ## 👥 Our Team
@@ -93,7 +93,7 @@ And then
 - <a href = "https://github.com/niribareva22">Natali Ribareva</a> (Designer)
 
 <p align="center">
-    <img src="https://cdn.discordapp.com/attachments/1103246649075171390/1116130271583031347/line-light.jpg"/>
+    <img src="https://cdn.discordapp.com/attachments/723998679400316949/1230162226456035359/linedivider.png?ex=663250da&is=661fdbda&hm=5087a414c1fffa8d66b6e1e5ab13db7396e9f41b1ef617fe60dc5afc47bfa8ce&"/>
 </p>
 
 ## <p align="center">If you like our project, you can show it by giving us a ⭐!</p>
