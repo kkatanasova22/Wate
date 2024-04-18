@@ -1,6 +1,8 @@
 window.onload = setGame;
 let coins = 0;
 
+import presents from '../images/present.png'
+
 function setGame() {
     let treeSource;
     let checkTree = localStorage.getItem("currentTree");
@@ -10,7 +12,7 @@ function setGame() {
 
     coinsHolder.innerText = ballance;
 
-        treeSource = "../images/present.png";
+        treeSource = presents;
 
     localStorage.getItem("currentTree", "treeOne");
     const treeConst = document.getElementsByClassName("treeConst")[0];

@@ -1,3 +1,8 @@
+import treeImgUrl from '../images/tree.png'
+import cherryTree from '../images/cherryTree.png'
+import SoilD from '../images/dirtySoil.png'
+import snowySoil from '../images/snowyBg.png'
+
 window.onload = setGame;
 let coins = 0;
 
@@ -16,11 +21,11 @@ function setGame() {
   }
 
   if (checkTree == "Default") {
-    treeSource = "../images/tree.png";
+    treeSource = treeImgUrl;
   }
 
   if (checkTree == "Cherry") {
-    treeSource = "../images/cherryTree.png";
+    treeSource = cherryTree;
   }
 
   localStorage.getItem("currentTree", "treeOne");
@@ -35,11 +40,11 @@ function setGame() {
   // Change image background when buying a new item
   let checkSoil = localStorage.getItem("soilType");
   if (checkSoil == "Soil") {
-    gameContainer.style.backgroundImage = "url('../images/dirtySoil.png')";
+    gameContainer.style.backgroundImage = SoilD;
   }
 
   if (checkSoil == "Snowy") {
-    gameContainer.style.backgroundImage = "url('../images/snowyBg.png')";
+    gameContainer.style.backgroundImage = snowySoil;
   }
 
   const container = document.getElementById("soilContainer");
