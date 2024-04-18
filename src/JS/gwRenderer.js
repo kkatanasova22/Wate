@@ -21,7 +21,7 @@ renderer.setClearColor(0x000000, 0);
 scene.add(light);
 let sunLoaded = false;
 let earthLoaded = false; 
-loader.load('../models/sun.glb', (gltf) => {
+loader.load('/models/sun.glb', (gltf) => {
   model = gltf.scene;
   model.scale.set(8.5, 8.5, 8.5);
   model.position.set(-8, 0, 0);
@@ -30,7 +30,7 @@ loader.load('../models/sun.glb', (gltf) => {
   checkModelsLoaded();
 });
 
-loader.load('../models/sun.glb', (gltf) => {
+loader.load('/models/sun.glb', (gltf) => {
   model3 = gltf.scene;
   model3.scale.set(7.5, 7.5, 7.5);
   model3.position.set(-25, -10, 0);
@@ -39,7 +39,7 @@ loader.load('../models/sun.glb', (gltf) => {
   checkModelsLoaded();
 });
 
-loader.load('../models/earth.glb', (gltf) => {
+loader.load('/models/earth.glb', (gltf) => {
   model2 = gltf.scene;
   model2.scale.set(0.017, 0.017, 0.017);
   model2.position.set(21, 10, 10);
